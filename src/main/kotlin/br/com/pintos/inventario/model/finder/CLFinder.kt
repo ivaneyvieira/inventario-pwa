@@ -5,19 +5,20 @@ import br.com.pintos.inventario.model.query.QCL
 import io.ebean.Finder
 
 open class CLFinder : Finder<Long, CL>(CL::class.java) {
-    val alias = QCL._alias
 
-    /**
-     * Start a new typed query.
-     */
-    fun where(): QCL {
-        return QCL(db())
-    }
+  val alias = QCL._alias
 
-    /**
-     * Start a new document store query.
-     */
-    fun text(): QCL {
-        return QCL(db()).text()
-    }
+  /**
+   * Start a new typed query.
+   */
+  fun where(): QCL {
+     return QCL(db())
+  }
+
+  /**
+   * Start a new document store query.
+   */
+  fun text(): QCL {
+     return QCL(db()).text()
+  }
 }

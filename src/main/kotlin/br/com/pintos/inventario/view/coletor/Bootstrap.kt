@@ -18,6 +18,9 @@ class CustomBootstrapListener : BootstrapListener {
     // manifest needs to be prepended before scripts or it won't be loaded
     head.prepend("""<meta name="theme-color" content="#227aef">""")
     head.prepend("""<link rel="manifest" href="manifest.json">""")
+    // Add service worker
+    response.document.body().appendElement("script")
+            .attr("src", "sw-register.js")
 
     addFavIconTags(head)
   }
