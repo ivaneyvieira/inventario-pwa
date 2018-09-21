@@ -2,427 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29510f01-9de5-4a99-954c-a50913b3f433" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/inventario-pwa_main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/inventario-pwa_test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario-pwa.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Gradle___inventario_pwa_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Gradle___inventario_pwa_war.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Gradle___inventario_pwa_war__exploded_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Gradle___inventario_pwa_war__exploded_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_beust_jcommander_1_48.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_beust_jcommander_1_48.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_jsimone_webapp_runner_8_5_30_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_jsimone_webapp_runner_8_5_30_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_vok_karibudsl_karibu_dsl_v10_0_4_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_vok_karibudsl_karibu_dsl_v10_0_4_7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_3_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_3_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_googlecode_gentyref_gentyref_1_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_googlecode_gentyref_gentyref_1_2_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_helger_ph_commons_9_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_helger_ph_commons_9_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_helger_ph_css_6_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_helger_ph_css_6_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_fileupload_commons_fileupload_1_3_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_fileupload_commons_fileupload_1_3_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_bytebuddy_byte_buddy_1_7_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_bytebuddy_byte_buddy_1_7_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jdt_ecj_3_12_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jdt_ecj_3_12_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_2_61.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_2_61.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_2_61.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_2_61.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_polymer_polymer_2_6_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_polymer_polymer_2_6_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_polymerelements_iron_a11y_announcer_2_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_polymerelements_iron_a11y_announcer_2_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_polymerelements_iron_a11y_keys_behavior_2_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_polymerelements_iron_a11y_keys_behavior_2_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_polymerelements_iron_flex_layout_2_0_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_polymerelements_iron_flex_layout_2_0_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_polymerelements_iron_icon_2_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_polymerelements_iron_icon_2_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_polymerelements_iron_iconset_svg_2_2_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_polymerelements_iron_iconset_svg_2_2_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_polymerelements_iron_media_query_2_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_polymerelements_iron_media_query_2_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_polymerelements_iron_meta_2_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_polymerelements_iron_meta_2_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_polymerelements_iron_overlay_behavior_2_3_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_polymerelements_iron_overlay_behavior_2_3_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_polymerelements_iron_scroll_target_behavior_2_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_polymerelements_iron_scroll_target_behavior_2_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_button_2_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_button_2_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_checkbox_2_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_checkbox_2_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_combo_box_4_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_combo_box_4_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_dialog_2_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_dialog_2_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_form_layout_2_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_form_layout_2_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_grid_5_0_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_grid_5_0_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_icons_4_1_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_icons_4_1_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_notification_1_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_notification_1_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_ordered_layout_1_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_ordered_layout_1_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_progress_bar_1_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_progress_bar_1_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_radio_button_1_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_radio_button_1_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_tabs_2_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_tabs_2_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_upload_4_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_bowergithub_vaadin_vaadin_upload_4_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/-1702329280/git-inventario-pwa.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/-1702329280/inventario-pwa_main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/-1702329280/inventario-pwa_test.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/META-INF/ebean-typequery.mf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/META-INF/inventario-pwa_main.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/META-INF/services/com.vaadin.flow.server.VaadinServiceInitListener" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/model/AppException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/model/AppExceptionKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/model/BaseModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/model/ConnectionFilter$doFilter$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/model/ConnectionFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/model/DB$sciptSql$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/model/DB$sqlEntity$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/model/DB$sqlScalar$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/model/DB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/model/DevException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/model/MainDbMigration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/model/MainQueryBeanGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/model/Transaction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/model/UserException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/viewmodel/CrudViewModel$add$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/viewmodel/CrudViewModel$countQuery$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/viewmodel/CrudViewModel$delete$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/viewmodel/CrudViewModel$findQuery$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/viewmodel/CrudViewModel$makeSort$orderByClause$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/viewmodel/CrudViewModel$update$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/viewmodel/CrudViewModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/viewmodel/EViewModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/viewmodel/EntityVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/viewmodel/IView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/viewmodel/Sort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/viewmodel/ViewModel$exec$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/viewmodel/ViewModel$execValue$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/framework/viewmodel/ViewModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/CL$Find.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/CL.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/Coleta$Find.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/Coleta.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/EStatusColeta.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/EStatusInventario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/EStatusLeitura.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/ETipoInventario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/Fornecedor$Find.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/Fornecedor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/Inventario$Find.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/Inventario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/Leitura$Find.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/Leitura.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/Loja$Find.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/Loja.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/Lote$Find.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/Lote.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/Produto$Find.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/Produto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/Usuario$Find.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/Usuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/finder/CLFinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/finder/ColetaFinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/finder/FornecedorFinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/finder/InventarioFinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/finder/LeituraFinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/finder/LojaFinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/finder/LoteFinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/finder/ProdutoFinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/finder/UsuarioFinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/QCL$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/QCL.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/QColeta$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/QColeta.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/QFornecedor$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/QFornecedor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/QInventario$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/QInventario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/QLeitura$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/QLeitura.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/QLoja$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/QLoja.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/QLote$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/QProduto$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/QProduto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/QUsuario$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/QUsuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/assoc/QAssocCL.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/assoc/QAssocColeta.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/assoc/QAssocFornecedor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/assoc/QAssocInventario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/assoc/QAssocLeitura.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/assoc/QAssocLoja.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/assoc/QAssocLote.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/assoc/QAssocProduto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/model/query/assoc/QAssocUsuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/Bootstrap$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/Bootstrap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/CustomBootstrapListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/CustomVaadinServiceInitListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/MainLayout$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/MainLayout$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/MainLayout$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/MainLayout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/components/AppDrawer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/components/AppHeader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/components/AppHeaderLayout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/components/AppLayoutKt$appDrawer$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/components/AppLayoutKt$appHeader$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/components/AppLayoutKt$appToolbar$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/components/AppLayoutKt$navMenuItem$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/components/AppLayoutKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/components/AppToolbar$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/components/AppToolbar$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/components/AppToolbar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/components/NavMenuItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/components/PaperIconButton.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/components/PaperIconButtonKt$paperIconButton$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/components/PaperIconButtonKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/pages/MatriculaView$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/pages/MatriculaView$1$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/pages/MatriculaView$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/pages/MatriculaView$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/br/com/pintos/inventario/view/coletor/pages/MatriculaView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/dbmigration/1.0__support_end_dating.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/dbmigration/I__create_procs.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/dbmigration/model/1.0__support_end_dating.model.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/ebean.mf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/ebean.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/logback.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/classes/versao.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/annotations-12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/annotations-13.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/antlr4-runtime-4.7.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/app-layout-2.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/atmosphere-runtime-2.4.24.vaadin1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/avaje-classpath-scanner-3.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/avaje-classpath-scanner-api-2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/avaje-datasource-3.2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/avaje-datasource-api-3.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/byte-buddy-1.7.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/classmate-1.3.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/commons-dbcp2-2.3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/commons-fileupload-1.3.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/commons-io-2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/commons-lang3-3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/commons-pool2-2.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/ebean-11.22.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/ebean-annotation-4.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/ebean-migration-11.9.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/ebean-querybean-11.20.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/finder-generator-4.2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/flow-client-1.0.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/flow-data-1.0.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/flow-html-components-1.0.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/flow-push-1.0.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/flow-server-1.0.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/font-roboto-1.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/gentyref-1.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/gwt-elemental-2.8.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/hibernate-validator-6.0.10.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/iron-a11y-announcer-2.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/iron-a11y-keys-behavior-2.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/iron-behaviors-2.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/iron-fit-behavior-2.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/iron-flex-layout-2.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/iron-form-element-behavior-2.1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/iron-icon-2.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/iron-iconset-svg-2.2.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/iron-list-2.0.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/iron-media-query-2.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/iron-meta-2.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/iron-overlay-behavior-2.3.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/iron-resizable-behavior-2.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/iron-scroll-target-behavior-2.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/iron-validatable-behavior-2.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/jackson-core-2.9.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/javax.el-3.0.1-b08.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/jboss-logging-3.3.2.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/jsoup-1.10.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/jsr305-3.0.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/karibu-dsl-v10-0.4.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/kotlin-reflect-1.2.61.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/kotlin-stdlib-1.2.61.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/kotlin-stdlib-common-1.2.61.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/kotlin-stdlib-jdk7-1.2.61.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/kotlin-stdlib-jdk8-1.2.61.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/logback-classic-1.2.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/logback-core-1.2.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/mysql-connector-java-5.1.45.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/paper-behaviors-2.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/paper-icon-button-2.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/paper-ripple-2.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/paper-styles-2.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/persistence-api-2.2.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/ph-commons-9.0.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/ph-css-6.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/polymer-2.6.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/querybean-generator-11.19.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/shadycss-1.2.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/slf4j-api-1.7.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/snakeyaml-1.21.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-button-2.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-button-flow-1.0.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-checkbox-2.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-checkbox-flow-1.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-combo-box-4.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-combo-box-flow-1.0.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-control-state-mixin-2.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-core-10.0.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-date-picker-3.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-date-picker-flow-1.0.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-development-mode-detector-1.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-dialog-2.0.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-dialog-flow-1.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-element-mixin-1.0.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-form-layout-2.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-form-layout-flow-1.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-grid-5.0.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-grid-flow-1.0.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-icons-4.1.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-icons-flow-1.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-iron-list-flow-1.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-item-2.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-list-box-1.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-list-box-flow-1.0.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-list-mixin-2.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-lumo-styles-1.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-lumo-theme-1.0.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-notification-1.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-notification-flow-1.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-ordered-layout-1.0.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-ordered-layout-flow-1.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-overlay-3.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-progress-bar-1.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-progress-bar-flow-1.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-radio-button-1.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-radio-button-flow-1.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-slf4j-jdk14-1.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-split-layout-4.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-split-layout-flow-1.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-tabs-2.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-tabs-flow-1.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-text-field-2.0.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-text-field-flow-1.0.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-themable-mixin-1.1.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-upload-4.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-upload-flow-1.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/vaadin-usage-statistics-1.0.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/validation-api-2.0.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/WEB-INF/lib/webcomponentsjs-1.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/frontend/styles.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/icons/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/icons/icon-192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/icons/icon-512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/icons/icon-96.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/images/offline-login-banner.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/offline-page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/sw-register.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/inventario-pwa.war/sw.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/war/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/model/AppException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/model/AppExceptionKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/model/BaseModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/model/ConnectionFilter$doFilter$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/model/ConnectionFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/model/DB$sciptSql$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/model/DB$sqlEntity$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/model/DB$sqlScalar$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/model/DevException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/model/MainDbMigration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/model/MainQueryBeanGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/model/Transaction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/model/UserException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/viewmodel/CrudViewModel$add$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/viewmodel/CrudViewModel$countQuery$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/viewmodel/CrudViewModel$delete$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/viewmodel/CrudViewModel$findQuery$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/viewmodel/CrudViewModel$makeSort$orderByClause$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/viewmodel/CrudViewModel$update$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/viewmodel/CrudViewModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/viewmodel/EViewModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/viewmodel/EntityVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/viewmodel/IView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/viewmodel/Sort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/viewmodel/ViewModel$exec$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/viewmodel/ViewModel$execValue$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/framework/viewmodel/ViewModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/CL$Find.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/CL.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/Coleta$Find.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/Coleta.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/EStatusColeta.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/EStatusInventario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/EStatusLeitura.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/ETipoInventario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/Fornecedor$Find.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/Fornecedor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/Inventario$Find.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/Inventario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/Leitura$Find.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/Leitura.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/Loja$Find.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/Loja.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/Lote$Find.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/Lote.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/Produto$Find.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/Produto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/Usuario$Find.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/Usuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/finder/CLFinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/finder/ColetaFinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/finder/FornecedorFinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/finder/InventarioFinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/finder/LeituraFinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/finder/LojaFinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/finder/LoteFinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/finder/ProdutoFinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/finder/UsuarioFinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/QCL$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/QCL.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/QColeta$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/QColeta.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/QFornecedor$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/QFornecedor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/QInventario$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/QInventario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/QLeitura$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/QLeitura.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/QLoja$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/QLoja.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/QLote$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/QLote.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/QProduto$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/QProduto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/QUsuario$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/QUsuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/assoc/QAssocCL.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/assoc/QAssocColeta.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/assoc/QAssocFornecedor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/assoc/QAssocInventario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/assoc/QAssocLeitura.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/assoc/QAssocLoja.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/assoc/QAssocLote.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/assoc/QAssocProduto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/model/query/assoc/QAssocUsuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/Bootstrap$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/Bootstrap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/CustomBootstrapListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/CustomVaadinServiceInitListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/MainLayout$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/MainLayout$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/MainLayout$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/MainLayout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/components/AppDrawer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/components/AppHeader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/components/AppHeaderLayout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/components/AppLayoutKt$appDrawer$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/components/AppLayoutKt$appHeader$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/components/AppLayoutKt$appToolbar$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/components/AppLayoutKt$navMenuItem$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/components/AppLayoutKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/components/AppToolbar$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/components/AppToolbar$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/components/AppToolbar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/components/NavMenuItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/components/PaperIconButton.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/components/PaperIconButtonKt$paperIconButton$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/components/PaperIconButtonKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/pages/MatriculaView$1$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/pages/MatriculaView$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/pages/MatriculaView$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/pintos/inventario/view/coletor/pages/MatriculaView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -521,10 +105,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
+            <state relative-caret-position="210">
               <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
@@ -540,7 +124,7 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
@@ -1366,7 +950,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537544244047" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537544635531" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/build.gradle" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -1415,12 +999,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537543455498</updated>
-      <workItem from="1537543457332" duration="769000" />
+      <workItem from="1537543457332" duration="1128000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="769000" />
+    <option name="totallyTimeSpent" value="1128000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1360" y="0" width="1920" height="1080" extended-state="6" />
@@ -1454,7 +1038,7 @@
       <window_info anchor="right" id="sbt" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="right" id="Gradle" visible="true" weight="0.32959402" />
+      <window_info anchor="right" id="Gradle" weight="0.32959402" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info anchor="right" id="Theme Preview" />
@@ -1483,17 +1067,17 @@
     <entry file="file://$PROJECT_DIR$/gradle.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
