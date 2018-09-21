@@ -9,7 +9,7 @@
         <option name="gradleHome" value="/usr/share/java/gradle" />
         <option name="modules">
           <set>
-            <option value="$USER_HOME$/ssd/git/inventario-pwa" />
+            <option value="$PROJECT_DIR$" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />
