@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1702329280/git-inventario-pwa.iml" filepath="$PROJECT_DIR$/.idea/modules/-1702329280/git-inventario-pwa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1702329280/inventario-pwa_main.iml" filepath="$PROJECT_DIR$/.idea/modules/-1702329280/inventario-pwa_main.iml" group="inventario-pwa" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1702329280/inventario-pwa_test.iml" filepath="$PROJECT_DIR$/.idea/modules/-1702329280/inventario-pwa_test.iml" group="inventario-pwa" />
+    </modules>
+  </component>
+</project>

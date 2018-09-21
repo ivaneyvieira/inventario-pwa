@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Gradle : inventario-pwa.war">
+    <output-path>$USER_HOME$/ssd/git/inventario-pwa/build/libs</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$" />
+    </properties>
+    <root id="archive" name="inventario-pwa.war">
+      <element id="artifact" artifact-name="Gradle : inventario-pwa.war (exploded)" />
+    </root>
+  </artifact>
+</component>
