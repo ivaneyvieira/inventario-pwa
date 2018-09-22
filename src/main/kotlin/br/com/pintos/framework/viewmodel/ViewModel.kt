@@ -4,42 +4,31 @@ import br.com.pintos.framework.model.Transaction
 
 abstract class ViewModel(val view: IView) {
   private var inExcection = false
-  
-  protected abstract fun execUpdate()
-  
-  private fun updateView(exception: EViewModel? = null) {
-    if (exception == null)
-      execUpdate()
-    
-    view.updateView(this)
-  }
-  
-  private fun updateModel() {
-    view.updateModel()
-  }
-  
+
   @Throws(EViewModel::class)
-  fun <T> execValue(block: () -> T): T? {
+  fun <T> execValue(block: () -> T?): T? {
     return transaction {
       try {
+        view.updateModel()
         block()
       } catch (e: EViewModel) {
-        updateView(e)
-        null
+        throw e
+      } finally {
+        view.updateView()
       }
     }
   }
-  
+
   @Throws(EViewModel::class)
   fun execString(block: () -> String): String {
     return execValue(block) ?: ""
   }
-  
+
   @Throws(EViewModel::class)
   fun execInt(block: () -> Int): Int {
     return execValue(block) ?: 0
   }
-  
+
   @Throws(EViewModel::class)
   fun exec(block: () -> Unit) {
     return transaction {
@@ -48,25 +37,26 @@ abstract class ViewModel(val view: IView) {
           block()
         else {
           inExcection = true
-          updateModel()
-          
+          view.updateModel()
+
           block()
-          
-          updateView()
+
+          view.updateView()
           inExcection = false
         }
       } catch (e: EViewModel) {
-        updateView(e)
         throw e
+      } finally {
+        view.updateView()
       }
     }
   }
-  
+
   @Throws(EViewModel::class)
   fun <T> execList(block: () -> List<T>): List<T> {
     return execValue(block).orEmpty()
   }
-  
+
   private fun <T> transaction(block: () -> T): T {
     return try {
       val ret = block()
@@ -82,14 +72,9 @@ abstract class ViewModel(val view: IView) {
 class EViewModel(msg: String) : Exception(msg)
 
 interface IView {
-  fun updateView(viewModel: ViewModel)
-  
+  val viewModel: ViewModel
+  fun updateView()
+
   fun updateModel()
-  
-  fun showWarning(msg: String)
-  
-  fun showError(msg: String)
-  
-  fun showInfo(msg: String)
 }
 

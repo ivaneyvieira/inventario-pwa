@@ -8,7 +8,15 @@ import javax.persistence.Table
 @Entity
 @Table(name = "usuario")
 class Usuario(
-        var matricula: Int, var nome: String, var senha: String, var apelido: String
+  var matricula: Int,
+  var nome: String,
+  var senha: String,
+  var apelido: String
 ) : BaseModel() {
-    companion object Find : UsuarioFinder()
+  companion object Find : UsuarioFinder() {
+    fun find(matricula: Int?): Usuario? {
+      matricula ?: return null
+      return where().matricula.eq(matricula).findOne()
+    }
+  }
 }
