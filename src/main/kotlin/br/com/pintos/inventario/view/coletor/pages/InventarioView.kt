@@ -23,7 +23,6 @@ class InventarioView : ViewLayout<InventarioViewModel>(InventarioViewModel::clas
       }
     }
     button("Voltar") {
-      setPrimary()
       addClickListener {
         viewModel.doVoltar()
       }
