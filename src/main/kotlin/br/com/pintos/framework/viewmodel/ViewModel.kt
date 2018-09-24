@@ -2,19 +2,27 @@ package br.com.pintos.framework.viewmodel
 
 import br.com.pintos.framework.model.Transaction
 
-abstract class ViewModel(val view: IView) {
-  private var inExcection = false
+open class ViewModel(val view: IView) {
+  private var inTransaction = false
 
   @Throws(EViewModel::class)
   fun <T> execValue(block: () -> T?): T? {
     return transaction {
       try {
-        view.updateModel()
-        block()
+        if (inTransaction)
+          block()
+        else {
+          inTransaction = true
+          view.updateModel()
+          val ret = block()
+
+          view.updateView()
+          inTransaction = false
+          ret
+        }
       } catch (e: EViewModel) {
-        throw e
-      } finally {
         view.updateView()
+        throw e
       }
     }
   }
@@ -31,23 +39,22 @@ abstract class ViewModel(val view: IView) {
 
   @Throws(EViewModel::class)
   fun exec(block: () -> Unit) {
-    return transaction {
+    transaction {
       try {
-        if (inExcection)
+        if (inTransaction)
           block()
         else {
-          inExcection = true
+          inTransaction = true
           view.updateModel()
 
           block()
 
           view.updateView()
-          inExcection = false
+          inTransaction = false
         }
       } catch (e: EViewModel) {
-        throw e
-      } finally {
         view.updateView()
+        throw e
       }
     }
   }
@@ -57,14 +64,15 @@ abstract class ViewModel(val view: IView) {
     return execValue(block).orEmpty()
   }
 
-  private fun <T> transaction(block: () -> T): T {
+  private fun <T> transaction(block: () -> T): T? {
     return try {
       val ret = block()
       Transaction.commit()
       ret
     } catch (e: Throwable) {
       Transaction.rollback()
-      throw e
+      view.showErro(e.message)
+      null
     }
   }
 }
@@ -72,9 +80,12 @@ abstract class ViewModel(val view: IView) {
 class EViewModel(msg: String) : Exception(msg)
 
 interface IView {
-  val viewModel: ViewModel
   fun updateView()
 
   fun updateModel()
+
+  fun navigate(view: Class<*>)
+
+  fun showErro(message: String?)
 }
 

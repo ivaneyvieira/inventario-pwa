@@ -70,6 +70,8 @@ dependencies {
   compile "org.apache.commons:commons-dbcp2:2.3.0"
   compile "org.jetbrains.kotlin:kotlin-reflect:1.2.61"
 
+  compile 'org.claspina:confirm-dialog:1.0.0'
+
   // test support
   testCompile "com.github.kaributesting:karibu-testing-v10:0.4.14"
   testCompile "com.github.mvysny.dynatest:dynatest:0.8"
