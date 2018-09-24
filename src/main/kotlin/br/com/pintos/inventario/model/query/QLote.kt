@@ -12,38 +12,40 @@ import io.ebean.typequery.TypeQueryBean
 
 /**
  * Query bean for Lote.
- *
+ * 
  * THIS IS A GENERATED OBJECT, DO NOT MODIFY THIS CLASS.
  */
 @TypeQueryBean
 class QLote : TQRootBean<Lote, QLote> {
-    companion object {
-        /**
-         * shared 'Alias' instance used to provide
-         * properties to select and fetch clauses
-         */
-        val _alias = QLote(true)
-    }
 
-    lateinit var id: PLong<QLote>
-    lateinit var version: PInteger<QLote>
-    lateinit var descricao: PString<QLote>
-    lateinit var loteavulso: PBoolean<QLote>
-    lateinit var numero: PString<QLote>
-    lateinit var loja: QAssocLoja<QLote>
-
+  companion object {
     /**
-     * Construct with a given EbeanServer.
+     * shared 'Alias' instance used to provide
+     * properties to select and fetch clauses
      */
-    constructor(server: EbeanServer) : super(Lote::class.java, server)
+    val _alias = QLote(true)
+  }
 
-    /**
-     * Construct using the default EbeanServer.
-     */
-    constructor() : super(Lote::class.java)
+  lateinit var id: PLong<QLote>
+  lateinit var version: PInteger<QLote>
+  lateinit var descricao: PString<QLote>
+  lateinit var loteavulso: PBoolean<QLote>
+  lateinit var numero: PString<QLote>
+  lateinit var loja: QAssocLoja<QLote>
 
-    /**
-     * Construct for Alias.
-     */
-    private constructor(dummy: Boolean) : super(dummy)
+
+  /**
+   * Construct with a given EbeanServer.
+   */
+  constructor(server: EbeanServer) : super(Lote::class.java, server)
+
+  /**
+   * Construct using the default EbeanServer.
+   */
+  constructor() : super(Lote::class.java)
+
+  /**
+   * Construct for Alias.
+   */
+  private constructor(dummy: Boolean) : super(dummy)
 }

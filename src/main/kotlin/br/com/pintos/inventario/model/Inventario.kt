@@ -1,6 +1,7 @@
 package br.com.pintos.inventario.model
 
 import br.com.pintos.framework.model.BaseModel
+import br.com.pintos.inventario.model.EStatusInventario.ABERTO
 import br.com.pintos.inventario.model.finder.InventarioFinder
 import io.ebean.annotation.DbEnumValue
 import java.time.LocalDate
@@ -14,7 +15,9 @@ import javax.persistence.Table
 @Entity
 @Table(name = "inventario")
 class Inventario(
-        var numero: Int, var data: LocalDate, var observacao: String,
+        var numero: Int,
+        var data: LocalDate,
+        var observacao: String,
         @Enumerated(EnumType.STRING)
         @Column(name = "tipoInventario")
         var tipoInventario: ETipoInventario,
@@ -28,7 +31,14 @@ class Inventario(
         @ManyToOne
         var cl: CL?
 ) : BaseModel() {
-    companion object Find : InventarioFinder()
+    companion object Find : InventarioFinder() {
+      fun inventariosAberto(): List<Inventario> {
+        return where()
+                .statusInventario.eq(ABERTO)
+                .orderBy().numero.asc()
+                .findList()
+      }
+    }
 }
 
 enum class ETipoInventario(

@@ -10,37 +10,39 @@ import io.ebean.typequery.TypeQueryBean
 
 /**
  * Query bean for Fornecedor.
- *
+ * 
  * THIS IS A GENERATED OBJECT, DO NOT MODIFY THIS CLASS.
  */
 @TypeQueryBean
 class QFornecedor : TQRootBean<Fornecedor, QFornecedor> {
-    companion object {
-        /**
-         * shared 'Alias' instance used to provide
-         * properties to select and fetch clauses
-         */
-        val _alias = QFornecedor(true)
-    }
 
-    lateinit var id: PLong<QFornecedor>
-    lateinit var version: PInteger<QFornecedor>
-    lateinit var codigo: PString<QFornecedor>
-    lateinit var fantazia: PString<QFornecedor>
-    lateinit var razao: PString<QFornecedor>
-
+  companion object {
     /**
-     * Construct with a given EbeanServer.
+     * shared 'Alias' instance used to provide
+     * properties to select and fetch clauses
      */
-    constructor(server: EbeanServer) : super(Fornecedor::class.java, server)
+    val _alias = QFornecedor(true)
+  }
 
-    /**
-     * Construct using the default EbeanServer.
-     */
-    constructor() : super(Fornecedor::class.java)
+  lateinit var id: PLong<QFornecedor>
+  lateinit var version: PInteger<QFornecedor>
+  lateinit var codigo: PString<QFornecedor>
+  lateinit var fantazia: PString<QFornecedor>
+  lateinit var razao: PString<QFornecedor>
 
-    /**
-     * Construct for Alias.
-     */
-    private constructor(dummy: Boolean) : super(dummy)
+
+  /**
+   * Construct with a given EbeanServer.
+   */
+  constructor(server: EbeanServer) : super(Fornecedor::class.java, server)
+
+  /**
+   * Construct using the default EbeanServer.
+   */
+  constructor() : super(Fornecedor::class.java)
+
+  /**
+   * Construct for Alias.
+   */
+  private constructor(dummy: Boolean) : super(dummy)
 }

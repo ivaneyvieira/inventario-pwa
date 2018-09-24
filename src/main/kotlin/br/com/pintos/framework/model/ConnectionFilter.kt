@@ -9,7 +9,7 @@ import javax.servlet.ServletRequest
 import javax.servlet.ServletResponse
 import javax.servlet.annotation.WebFilter
 
-@WebFilter(value = ["/*"])
+//@WebFilter(value = ["/*"])
 class ConnectionFilter : Filter {
   
   @Throws(ServletException::class)
@@ -22,9 +22,9 @@ class ConnectionFilter : Filter {
           response: ServletResponse,
           chain: FilterChain
                        ) {
-    Transaction.execTransacao {
+  //  Transaction.execTransacao {
       chain.doFilter(request, response)
-    }
+ //   }
   }
   
   override fun destroy() {

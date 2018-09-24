@@ -17,42 +17,44 @@ import io.ebean.typequery.TypeQueryBean
 
 /**
  * Query bean for Inventario.
- *
+ * 
  * THIS IS A GENERATED OBJECT, DO NOT MODIFY THIS CLASS.
  */
 @TypeQueryBean
 class QInventario : TQRootBean<Inventario, QInventario> {
-    companion object {
-        /**
-         * shared 'Alias' instance used to provide
-         * properties to select and fetch clauses
-         */
-        val _alias = QInventario(true)
-    }
 
-    lateinit var id: PLong<QInventario>
-    lateinit var version: PInteger<QInventario>
-    lateinit var numero: PInteger<QInventario>
-    lateinit var data: PLocalDate<QInventario>
-    lateinit var observacao: PString<QInventario>
-    lateinit var tipoInventario: PEnum<QInventario, ETipoInventario>
-    lateinit var statusInventario: PEnum<QInventario, EStatusInventario>
-    lateinit var loja: QAssocLoja<QInventario>
-    lateinit var fornecedor: QAssocFornecedor<QInventario>
-    lateinit var cl: QAssocCL<QInventario>
-
+  companion object {
     /**
-     * Construct with a given EbeanServer.
+     * shared 'Alias' instance used to provide
+     * properties to select and fetch clauses
      */
-    constructor(server: EbeanServer) : super(Inventario::class.java, server)
+    val _alias = QInventario(true)
+  }
 
-    /**
-     * Construct using the default EbeanServer.
-     */
-    constructor() : super(Inventario::class.java)
+  lateinit var id: PLong<QInventario>
+  lateinit var version: PInteger<QInventario>
+  lateinit var numero: PInteger<QInventario>
+  lateinit var data: PLocalDate<QInventario>
+  lateinit var observacao: PString<QInventario>
+  lateinit var tipoInventario: PEnum<QInventario,ETipoInventario>
+  lateinit var statusInventario: PEnum<QInventario,EStatusInventario>
+  lateinit var loja: QAssocLoja<QInventario>
+  lateinit var fornecedor: QAssocFornecedor<QInventario>
+  lateinit var cl: QAssocCL<QInventario>
 
-    /**
-     * Construct for Alias.
-     */
-    private constructor(dummy: Boolean) : super(dummy)
+
+  /**
+   * Construct with a given EbeanServer.
+   */
+  constructor(server: EbeanServer) : super(Inventario::class.java, server)
+
+  /**
+   * Construct using the default EbeanServer.
+   */
+  constructor() : super(Inventario::class.java)
+
+  /**
+   * Construct for Alias.
+   */
+  private constructor(dummy: Boolean) : super(dummy)
 }

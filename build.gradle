@@ -57,7 +57,7 @@ dependencies {
 
   //Dependências do ebean
   //kapt 'io.ebean:kotlin-querybean-generator:11.1.2'
-  compile "io.ebean:ebean:11.22.3"
+  compile "io.ebean:ebean:11.22.5"
   //compile "io.ebean:kotlin-querybean-generator:11.19.1"
   compile "io.ebean:querybean-generator:11.19.1"
   compile "io.ebean:ebean-querybean:11.20.1"
@@ -69,6 +69,8 @@ dependencies {
   compile "mysql:mysql-connector-java:5.1.45"
   compile "org.apache.commons:commons-dbcp2:2.3.0"
   compile "org.jetbrains.kotlin:kotlin-reflect:1.2.61"
+
+  compile 'org.claspina:confirm-dialog:1.0.0'
 
   // test support
   testCompile "com.github.kaributesting:karibu-testing-v10:0.4.14"

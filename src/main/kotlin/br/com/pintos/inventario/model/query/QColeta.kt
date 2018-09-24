@@ -14,40 +14,42 @@ import io.ebean.typequery.TypeQueryBean
 
 /**
  * Query bean for Coleta.
- *
+ * 
  * THIS IS A GENERATED OBJECT, DO NOT MODIFY THIS CLASS.
  */
 @TypeQueryBean
 class QColeta : TQRootBean<Coleta, QColeta> {
-    companion object {
-        /**
-         * shared 'Alias' instance used to provide
-         * properties to select and fetch clauses
-         */
-        val _alias = QColeta(true)
-    }
 
-    lateinit var id: PLong<QColeta>
-    lateinit var version: PInteger<QColeta>
-    lateinit var numleitura: PInteger<QColeta>
-    lateinit var inventario: QAssocInventario<QColeta>
-    lateinit var lote: QAssocLote<QColeta>
-    lateinit var usuario: QAssocUsuario<QColeta>
-    lateinit var coletor: PInteger<QColeta>
-    lateinit var status: PEnum<QColeta, EStatusColeta>
-
+  companion object {
     /**
-     * Construct with a given EbeanServer.
+     * shared 'Alias' instance used to provide
+     * properties to select and fetch clauses
      */
-    constructor(server: EbeanServer) : super(Coleta::class.java, server)
+    val _alias = QColeta(true)
+  }
 
-    /**
-     * Construct using the default EbeanServer.
-     */
-    constructor() : super(Coleta::class.java)
+  lateinit var id: PLong<QColeta>
+  lateinit var version: PInteger<QColeta>
+  lateinit var numleitura: PInteger<QColeta>
+  lateinit var inventario: QAssocInventario<QColeta>
+  lateinit var lote: QAssocLote<QColeta>
+  lateinit var usuario: QAssocUsuario<QColeta>
+  lateinit var coletor: PInteger<QColeta>
+  lateinit var status: PEnum<QColeta,EStatusColeta>
 
-    /**
-     * Construct for Alias.
-     */
-    private constructor(dummy: Boolean) : super(dummy)
+
+  /**
+   * Construct with a given EbeanServer.
+   */
+  constructor(server: EbeanServer) : super(Coleta::class.java, server)
+
+  /**
+   * Construct using the default EbeanServer.
+   */
+  constructor() : super(Coleta::class.java)
+
+  /**
+   * Construct for Alias.
+   */
+  private constructor(dummy: Boolean) : super(dummy)
 }

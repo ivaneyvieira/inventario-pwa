@@ -1,6 +1,6 @@
 {
-  "name": "Vaadin Kotlin PWA Demo",
-  "short_name": "Vaadin Kotlin PWA Demo",
+  "name": "Gerenciamento de inventário",
+  "short_name": "Coletor",
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#227aef",

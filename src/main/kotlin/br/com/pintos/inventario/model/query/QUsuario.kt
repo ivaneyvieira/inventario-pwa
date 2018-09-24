@@ -10,38 +10,40 @@ import io.ebean.typequery.TypeQueryBean
 
 /**
  * Query bean for Usuario.
- *
+ * 
  * THIS IS A GENERATED OBJECT, DO NOT MODIFY THIS CLASS.
  */
 @TypeQueryBean
 class QUsuario : TQRootBean<Usuario, QUsuario> {
-    companion object {
-        /**
-         * shared 'Alias' instance used to provide
-         * properties to select and fetch clauses
-         */
-        val _alias = QUsuario(true)
-    }
 
-    lateinit var id: PLong<QUsuario>
-    lateinit var version: PInteger<QUsuario>
-    lateinit var matricula: PInteger<QUsuario>
-    lateinit var nome: PString<QUsuario>
-    lateinit var senha: PString<QUsuario>
-    lateinit var apelido: PString<QUsuario>
-
+  companion object {
     /**
-     * Construct with a given EbeanServer.
+     * shared 'Alias' instance used to provide
+     * properties to select and fetch clauses
      */
-    constructor(server: EbeanServer) : super(Usuario::class.java, server)
+    val _alias = QUsuario(true)
+  }
 
-    /**
-     * Construct using the default EbeanServer.
-     */
-    constructor() : super(Usuario::class.java)
+  lateinit var id: PLong<QUsuario>
+  lateinit var version: PInteger<QUsuario>
+  lateinit var matricula: PInteger<QUsuario>
+  lateinit var nome: PString<QUsuario>
+  lateinit var senha: PString<QUsuario>
+  lateinit var apelido: PString<QUsuario>
 
-    /**
-     * Construct for Alias.
-     */
-    private constructor(dummy: Boolean) : super(dummy)
+
+  /**
+   * Construct with a given EbeanServer.
+   */
+  constructor(server: EbeanServer) : super(Usuario::class.java, server)
+
+  /**
+   * Construct using the default EbeanServer.
+   */
+  constructor() : super(Usuario::class.java)
+
+  /**
+   * Construct for Alias.
+   */
+  private constructor(dummy: Boolean) : super(dummy)
 }
