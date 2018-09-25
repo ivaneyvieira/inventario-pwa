@@ -32,6 +32,7 @@ abstract class ViewLayout<VM : ViewModel>(classViewModel: Class<VM>) : IView, Ve
     horizontalLayout {
       this.initButton()
     }
+    updateView()
   }
 
   override fun updateView() {

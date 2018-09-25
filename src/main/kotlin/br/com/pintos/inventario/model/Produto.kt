@@ -21,5 +21,9 @@ class Produto(
         @ManyToOne
         var fornecedor: Fornecedor
 ) : BaseModel() {
-    companion object Find : ProdutoFinder()
+    companion object Find : ProdutoFinder() {
+      fun findLeitura(leitura: String): Produto? {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+      }
+    }
 }

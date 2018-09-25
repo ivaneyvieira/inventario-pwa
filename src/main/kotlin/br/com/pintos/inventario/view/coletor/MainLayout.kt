@@ -1,10 +1,13 @@
 package br.com.pintos.inventario.view.coletor
 
+import br.com.pintos.inventario.model.Inventario
+import br.com.pintos.inventario.model.Usuario
 import br.com.pintos.inventario.view.coletor.components.AppHeaderLayout
 import br.com.pintos.inventario.view.coletor.components.appHeader
 import br.com.pintos.inventario.view.coletor.components.appToolbar
 import com.github.vok.karibudsl.flow.div
 import com.vaadin.flow.component.HasElement
+import com.vaadin.flow.component.UI
 import com.vaadin.flow.component.dependency.HtmlImport
 import com.vaadin.flow.component.html.Div
 import com.vaadin.flow.component.page.BodySize
@@ -26,7 +29,8 @@ class MainLayout : AppHeaderLayout(), RouterLayout {
       }
     }
     content = div {
-      setSizeFull(); classNames.add("app-content")
+      setSizeFull()
+      classNames.add("app-content")
     }
   }
 
@@ -34,3 +38,4 @@ class MainLayout : AppHeaderLayout(), RouterLayout {
     this.content.element.appendChild(content.element)
   }
 }
+

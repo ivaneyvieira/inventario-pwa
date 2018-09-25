@@ -23,7 +23,14 @@ class Coleta(
         @Enumerated(EnumType.STRING)
         var status: EStatusColeta
 ) : BaseModel() {
-    companion object Find : ColetaFinder()
+  fun quantidadeLeitura(): Int {
+    return Leitura.where()
+            .coleta.id.eq(id)
+            .quant.notEqualTo(0)
+            .findCount()
+  }
+
+  companion object Find : ColetaFinder()
 }
 
 enum class EStatusColeta {

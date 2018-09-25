@@ -4,15 +4,19 @@ import br.com.pintos.framework.viewmodel.IView
 import br.com.pintos.framework.viewmodel.SubViewModel
 import br.com.pintos.inventario.model.Inventario
 
-class InventarioViewModel(view: IView, val classInventarioView : Class<*>) : SubViewModel(view, classInventarioView ) {
-  fun doConfirmar() {
-    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+class InventarioViewModel(view: IView, classMatriculaView: Class<*>, val classLoteView : Class<*>) : SubViewModel(view, classMatriculaView) {
+  fun doConfirmar() = exec {
+    inventario?.let {
+      userInformation.inventario = inventario
+      view.navigate(classLoteView)
+    }
   }
 
-  fun doVoltar() {
-    view.navigate(classInventarioView)
-  }
-
-  var inventario : Inventario? = null
+  var usuarioApelido = userInformation.usuarioApelido
+  var inventario: Inventario? = null
   val inventariosAberto = Inventario.inventariosAberto()
+
+  init {
+    userInformation.inventario = null
+  }
 }
