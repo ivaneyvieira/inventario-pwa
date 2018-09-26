@@ -3,7 +3,6 @@ package br.com.pintos.inventario.viewmodel
 import br.com.pintos.framework.viewmodel.IView
 import br.com.pintos.framework.viewmodel.SubViewModel
 import br.com.pintos.inventario.model.Lote
-import br.com.pintos.inventario.model.Lote.Find
 import br.com.pintos.inventario.model.Produto
 
 class ColetaViewModel(view: IView, classMenuView: Class<*>) : SubViewModel(view, classMenuView) {
