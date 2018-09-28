@@ -60,5 +60,5 @@ class MatriculaView : ViewLayout<MatriculaViewModel>(MatriculaViewModel::class.j
     setSizeFull()
   }
 
-  override fun createViewModel() = MatriculaViewModel(this, InventarioView::class.java, LoteView::class.java)
+  override fun createViewModel() = MatriculaViewModel(this, InventarioView::class, LoteView::class)
 }

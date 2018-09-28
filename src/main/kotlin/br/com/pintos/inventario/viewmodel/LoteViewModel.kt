@@ -3,8 +3,9 @@ package br.com.pintos.inventario.viewmodel
 import br.com.pintos.framework.viewmodel.IView
 import br.com.pintos.framework.viewmodel.SubViewModel
 import br.com.pintos.inventario.model.Lote
+import kotlin.reflect.KClass
 
-class LoteViewModel(view: IView, classInventarioView: Class<*>, val classColetaView: Class<*>) :
+class LoteViewModel(view: IView, classInventarioView: KClass<*>, val classColetaView: KClass<*>) :
   SubViewModel(view, classInventarioView) {
   fun doConfirmar() = exec {
     lote?.let { lote ->

@@ -3,8 +3,10 @@ package br.com.pintos.inventario.viewmodel
 import br.com.pintos.framework.viewmodel.IView
 import br.com.pintos.framework.viewmodel.SubViewModel
 import br.com.pintos.inventario.model.Inventario
+import kotlin.reflect.KClass
 
-class InventarioViewModel(view: IView, classMatriculaView: Class<*>, val classLoteView : Class<*>) : SubViewModel(view, classMatriculaView) {
+class InventarioViewModel(view: IView, classMatriculaView: KClass<*>, val classLoteView: KClass<*>) :
+  SubViewModel(view, classMatriculaView) {
   fun doConfirmar() = exec {
     inventario?.let {
       userInformation.inventario = inventario

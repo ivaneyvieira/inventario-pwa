@@ -5,8 +5,9 @@ import br.com.pintos.framework.viewmodel.IView
 import br.com.pintos.framework.viewmodel.ViewModel
 import br.com.pintos.inventario.model.Inventario
 import br.com.pintos.inventario.model.Usuario
+import kotlin.reflect.KClass
 
-class MatriculaViewModel(view: IView, val classInventarioView: Class<*>, val classLoteView : Class<*>) : ViewModel(view) {
+class MatriculaViewModel(view: IView, val classInventarioView: KClass<*>, val classLoteView : KClass<*>) : ViewModel(view) {
   var matricula: Int? = null
   var senha: String? = ""
   var nome: String? = ""

@@ -13,7 +13,7 @@ import com.vaadin.flow.router.Route
 
 @Route(layout = MainLayout::class)
 class LoteView : ViewLayout<LoteViewModel>(LoteViewModel::class.java) {
-  override fun createViewModel() = LoteViewModel(this, InventarioView::class.java, ColetaView::class.java)
+  override fun createViewModel() = LoteViewModel(this, InventarioView::class, ColetaView::class)
 
   override val title: String
     get() = "Lote"

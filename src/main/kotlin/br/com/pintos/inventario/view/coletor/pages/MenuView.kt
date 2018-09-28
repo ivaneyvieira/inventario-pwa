@@ -14,7 +14,7 @@ import com.vaadin.flow.router.Route
 
 @Route(layout = MainLayout::class)
 class MenuView : ViewLayout<MenuViewModel>(MenuViewModel::class.java) {
-  override fun createViewModel()= MenuViewModel(this, MatriculaView::class.java)
+  override fun createViewModel() = MenuViewModel(this, MatriculaView::class, LoteView::class, ColetaView::class)
 
   override val title: String
     get() = "Menu"

@@ -14,7 +14,7 @@ import com.vaadin.flow.router.Route
 
 @Route(layout = MainLayout::class)
 class ColetaView : ViewLayout<ColetaViewModel>(ColetaViewModel::class.java) {
-  override fun createViewModel()= ColetaViewModel(this, MenuView::class.java)
+  override fun createViewModel()= ColetaViewModel(this, MenuView::class, LoteView::class)
 
   override val title: String
     get() = "Coleta"

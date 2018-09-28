@@ -2,14 +2,23 @@ package br.com.pintos.inventario.viewmodel
 
 import br.com.pintos.framework.viewmodel.IView
 import br.com.pintos.framework.viewmodel.SubViewModel
+import br.com.pintos.inventario.view.coletor.pages.ColetaView
+import br.com.pintos.inventario.view.coletor.pages.LoteView
+import kotlin.reflect.KClass
 
-class MenuViewModel(view: IView, classMatriculaView: Class<*>) : SubViewModel(view, classMatriculaView) {
+class MenuViewModel(
+  view: IView,
+  classMatriculaView: KClass<*>,
+  val classLoteView: KClass<LoteView>,
+  val classColetaView: KClass<ColetaView>
+) :
+  SubViewModel(view, classMatriculaView) {
   fun doLote() {
-    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    view.navigate(classLoteView)
   }
 
   fun doColeta() {
-    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    view.navigate(classColetaView)
   }
 
   fun doApaga() {

@@ -15,7 +15,7 @@ import com.vaadin.flow.router.Route
 
 @Route(layout = MainLayout::class)
 class InventarioView : ViewLayout<InventarioViewModel>(InventarioViewModel::class.java) {
-  override fun createViewModel() = InventarioViewModel(this, MatriculaView::class.java, LoteView::class.java)
+  override fun createViewModel() = InventarioViewModel(this, MatriculaView::class, LoteView::class)
 
   override fun HorizontalLayout.initButton() {
     button("Voltar") {

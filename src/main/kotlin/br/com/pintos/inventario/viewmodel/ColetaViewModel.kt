@@ -1,35 +1,51 @@
 package br.com.pintos.inventario.viewmodel
 
+import br.com.pintos.framework.viewmodel.EViewModel
 import br.com.pintos.framework.viewmodel.IView
 import br.com.pintos.framework.viewmodel.SubViewModel
+import br.com.pintos.inventario.model.EStatusLeitura.ERRO
+import br.com.pintos.inventario.model.EStatusLeitura.SUCESSO
+import br.com.pintos.inventario.model.Leitura
 import br.com.pintos.inventario.model.Lote
 import br.com.pintos.inventario.model.Produto
+import kotlin.reflect.KClass
 
-class ColetaViewModel(view: IView, classMenuView: Class<*>) : SubViewModel(view, classMenuView) {
+class ColetaViewModel(view: IView, classMenuView: KClass<*>, private val classLoteView: KClass<*>) :
+  SubViewModel(view, classMenuView) {
   fun doLeitura() = exec {
     leitura?.let { leitura ->
-      val lote = Lote.findNumLote(leitura, userInformation.inventario?.loja)
+      val loja = userInformation.inventario?.loja
+      val lote = Lote.findNumLote(leitura, loja)
       if (lote != null)
         doMudarLote(lote)
       else {
-        val produto = Produto.findLeitura(leitura)
-        produto?.let { produto ->
-          codigo = produto.codigo
-          grade = produto.grade
-          descricao = produto.descricao
-          quantidade = userInformation.quantidade
-          doLeitura(produto)
-        }
+        doLeitura(leitura)
+        quantidade = userInformation.quantidade
       }
     }
   }
 
-  private fun doLeitura(produto: Produto) {
-    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+  private fun doLeitura(leitura: String) {
+    val produto = Produto.findLeitura(leitura)
+    codigo = produto?.codigo
+    grade = produto?.grade
+    descricao = produto?.descricao
+    val coleta = userInformation.coleta ?: throw EViewModel("Coleta não encontrada")
+    Leitura(
+      leitura = leitura,
+      observacao = "",
+      quant = if (produto == null) 0 else 1,
+      status = if (produto == null) ERRO else SUCESSO,
+      coleta = coleta,
+      produto = produto,
+      saldo = null
+    ).insert()
   }
 
   private fun doMudarLote(lote: Lote) {
-    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    userInformation.lote = lote
+    userInformation.coleta = null
+    view.navigate(classLoteView)
   }
 
   var inventarioLoja = userInformation.inventarioLoja

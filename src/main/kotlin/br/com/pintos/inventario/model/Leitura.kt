@@ -21,8 +21,8 @@ class Leitura(
         @ManyToOne
         var coleta: Coleta,
         @ManyToOne
-        var produto: Produto,
-        var saldo: Int
+        var produto: Produto?,
+        var saldo: Int?
 ) : BaseModel() {
   companion object Find : LeituraFinder()
 }
