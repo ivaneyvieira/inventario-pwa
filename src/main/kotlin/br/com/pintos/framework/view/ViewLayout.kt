@@ -5,12 +5,14 @@ import br.com.pintos.framework.viewmodel.ViewModel
 import com.github.vok.karibudsl.flow.formLayout
 import com.github.vok.karibudsl.flow.horizontalLayout
 import com.github.vok.karibudsl.flow.label
+import com.github.vok.karibudsl.flow.navigateToView
 import com.vaadin.flow.component.Component
 import com.vaadin.flow.component.formlayout.FormLayout
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout
 import com.vaadin.flow.component.orderedlayout.VerticalLayout
 import com.vaadin.flow.data.binder.Binder
 import org.claspina.confirmdialog.ConfirmDialog
+import kotlin.reflect.KClass
 
 abstract class ViewLayout<VM : ViewModel>(classViewModel: Class<VM>) : IView, VerticalLayout() {
   val viewModel: VM = createViewModel()
@@ -43,13 +45,12 @@ abstract class ViewLayout<VM : ViewModel>(classViewModel: Class<VM>) : IView, Ve
     binder.writeBean(viewModel)
   }
 
-  override fun navigate(view: Class<*>) {
-    ui.ifPresent { ui ->
-      @Suppress("UNCHECKED_CAST")
-      val viewClass = view as? Class<Component>
-      viewClass?.let {
-        ui.navigate(viewClass)
-      }
+  override fun navigate(view: KClass<*>) {
+    @Suppress("UNCHECKED_CAST")
+    val viewClass = view as? KClass<Component>
+
+    viewClass?.let {
+      navigateToView(viewClass)
     }
   }
 
