@@ -23,6 +23,7 @@ class ColetaViewModel(view: IView, classMenuView: KClass<*>, private val classLo
         quantidade = userInformation.quantidade
       }
     }
+    leitura = ""
   }
 
   private fun doLeitura(leitura: String) {
