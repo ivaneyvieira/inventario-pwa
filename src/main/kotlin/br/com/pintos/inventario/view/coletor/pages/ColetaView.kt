@@ -22,36 +22,36 @@ class ColetaView : ViewLayout<ColetaViewModel>(ColetaViewModel::class.java) {
 
   override fun FormLayout.initForm() {
     textField("Loja") {
-      isEnabled = false
+      isReadOnly = true
       bind(binder).bind(ColetaViewModel::inventarioLoja)
     }
     horizontalLayout {
       textField("Lote") {
-        isEnabled = false
+        isReadOnly = true
         bind(binder).bind(ColetaViewModel::loteColeta)
       }
       textField("Quantidade") {
-        isEnabled = false
+        isReadOnly = true
         bind(binder).withConverter(StringToIntegerConverter("Quantidade Inválida"))
                 .bind(ColetaViewModel::quantidade.name)
       }
     }
     textField("Usuário") {
-      isEnabled = false
+      isReadOnly = true
       bind(binder).bind(ColetaViewModel::usuarioApelido)
     }
     horizontalLayout {
       textField("Código") {
-        isEnabled = false
+        isReadOnly = true
         bind(binder).bind(ColetaViewModel::codigo)
       }
       textField("Grade") {
-        isEnabled = false
+        isReadOnly = true
         bind(binder).bind(ColetaViewModel::grade)
       }
     }
     textField("Descrição") {
-      isEnabled = false
+      isReadOnly = true
       bind(binder).bind(ColetaViewModel::descricao)
     }
     textField("Leitura") {
