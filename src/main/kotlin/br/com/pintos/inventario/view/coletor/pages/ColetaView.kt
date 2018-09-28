@@ -10,6 +10,7 @@ import com.github.vok.karibudsl.flow.horizontalLayout
 import com.github.vok.karibudsl.flow.textField
 import com.vaadin.flow.component.formlayout.FormLayout
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout
+import com.vaadin.flow.data.converter.StringToIntegerConverter
 import com.vaadin.flow.router.Route
 
 @Route(layout = MainLayout::class)
@@ -31,7 +32,8 @@ class ColetaView : ViewLayout<ColetaViewModel>(ColetaViewModel::class.java) {
       }
       textField("Quantidade") {
         isEnabled = false
-        bind(binder).bind(ColetaViewModel::quantidade.name)
+        bind(binder).withConverter(StringToIntegerConverter("Quantidade Inválida"))
+                .bind(ColetaViewModel::quantidade.name)
       }
     }
     textField("Usuário") {
@@ -53,7 +55,7 @@ class ColetaView : ViewLayout<ColetaViewModel>(ColetaViewModel::class.java) {
       bind(binder).bind(ColetaViewModel::descricao)
     }
     textField("Leitura") {
-      bind(binder).bind(ColetaViewModel::codigo)
+      bind(binder).bind(ColetaViewModel::leitura)
       focus()
       addValueChangeListener {
         if(it.isFromClient){
