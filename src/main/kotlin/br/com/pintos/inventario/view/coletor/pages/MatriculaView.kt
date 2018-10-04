@@ -33,6 +33,7 @@ class MatriculaView : ViewLayout<MatriculaViewModel>(MatriculaViewModel::class.j
     get() = "Login"
 
   override fun FormLayout.initForm() {
+    isSpacing = false
     textField("Matrícula") {
       width = "6em"
       bind(binder)
@@ -60,5 +61,5 @@ class MatriculaView : ViewLayout<MatriculaViewModel>(MatriculaViewModel::class.j
     setSizeFull()
   }
 
-  override fun createViewModel() = MatriculaViewModel(this, InventarioView::class.java)
+  override fun createViewModel() = MatriculaViewModel(this, InventarioView::class, LoteView::class)
 }

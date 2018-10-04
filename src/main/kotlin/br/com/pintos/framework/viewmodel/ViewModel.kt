@@ -1,6 +1,7 @@
 package br.com.pintos.framework.viewmodel
 
 import br.com.pintos.framework.model.Transaction
+import kotlin.reflect.KClass
 
 open class ViewModel(val view: IView) {
   private var inTransaction = false
@@ -22,6 +23,8 @@ open class ViewModel(val view: IView) {
         }
       } catch (e: EViewModel) {
         view.updateView()
+        throw e
+      } catch (e: Throwable) {
         throw e
       }
     }
@@ -55,6 +58,8 @@ open class ViewModel(val view: IView) {
       } catch (e: EViewModel) {
         view.updateView()
         throw e
+      } catch (e: Throwable) {
+        throw e
       }
     }
   }
@@ -71,6 +76,7 @@ open class ViewModel(val view: IView) {
       ret
     } catch (e: Throwable) {
       Transaction.rollback()
+      e.printStackTrace()
       view.showErro(e.message)
       null
     }
@@ -84,7 +90,7 @@ interface IView {
 
   fun updateModel()
 
-  fun navigate(view: Class<*>)
+  fun navigate(view: KClass<*>)
 
   fun showErro(message: String?)
 }

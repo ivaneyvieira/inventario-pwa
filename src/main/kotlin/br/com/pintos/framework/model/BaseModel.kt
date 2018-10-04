@@ -12,5 +12,5 @@ abstract class BaseModel(
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         var id: Long = 0,
-        var version: Int = 0
+        var version: Int? = 0
                         ) : Model()

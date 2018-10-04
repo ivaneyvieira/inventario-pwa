@@ -21,5 +21,9 @@ class Produto(
         @ManyToOne
         var fornecedor: Fornecedor
 ) : BaseModel() {
-    companion object Find : ProdutoFinder()
+    companion object Find : ProdutoFinder() {
+      fun findLeitura(leitura: String): Produto? {
+        return where().barcode.eq(leitura).findList().firstOrNull()
+      }
+    }
 }
