@@ -7,7 +7,7 @@ import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout
 import com.vaadin.flow.router.Route
 
-@Route("", layout = MainLayout::class)
+//@Route("", layout = MainLayout::class)
 class ViewEmpty: HorizontalLayout() {
   init {
     val layout = HorizontalLayout()

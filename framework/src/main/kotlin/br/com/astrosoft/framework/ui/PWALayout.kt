@@ -10,6 +10,7 @@ import com.github.appreciated.app.layout.entity.Section.FOOTER
 import com.github.appreciated.app.layout.entity.Section.HEADER
 import com.github.appreciated.app.layout.router.AppLayoutRouterLayout
 import com.vaadin.flow.component.Component
+import com.vaadin.flow.component.html.Image
 import com.vaadin.flow.component.icon.Icon
 import com.vaadin.flow.component.icon.VaadinIcon
 import com.vaadin.flow.theme.AbstractTheme
