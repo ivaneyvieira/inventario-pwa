@@ -7,7 +7,7 @@ import br.com.pintos.inventario.viewmodel.InventarioViewModel
 import com.vaadin.flow.router.BeforeLeaveEvent
 import com.vaadin.flow.router.Route
 
-@Route(layout = MainLayout::class)
+//@Route(layout = MainLayout::class)
 class InventarioView: LayoutView<InventarioViewModel>() {
   override val viewModel: InventarioViewModel
     get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.

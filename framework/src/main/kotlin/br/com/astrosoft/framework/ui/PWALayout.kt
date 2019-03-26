@@ -14,9 +14,10 @@ import com.vaadin.flow.component.icon.Icon
 import com.vaadin.flow.component.icon.VaadinIcon
 import com.vaadin.flow.theme.AbstractTheme
 
-class PWALayout : AppLayoutRouterLayout() {
-  fun init(title: String = "", behaviour: Behaviour = Behaviour.LEFT_HYBRID, initLayout: AppLayoutBuilder.() -> Unit) {
+abstract class PWALayout : AppLayoutRouterLayout() {
+  protected fun init(title: String = "", behaviour: Behaviour = Behaviour.LEFT_HYBRID, initLayout: AppLayoutBuilder.() -> Unit) {
     val appLayoutBuilder = AppLayoutBuilder.get(behaviour).apply {
+      title(title)
       initLayout()
     }
     init(appLayoutBuilder.build())
@@ -70,6 +71,10 @@ class PWALayout : AppLayoutRouterLayout() {
 
   protected fun LeftAppMenuBuilder.sectionHeader(element: Component) {
     addToSection(element, HEADER)
+  }
+
+  protected fun LeftAppMenuBuilder.iconHeader(src: String) {
+    addToSection(MenuHeaderComponent(null, null, src), HEADER)
   }
 
   protected fun LeftAppMenuBuilder.sectionFooter(element: Component) {

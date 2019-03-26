@@ -7,7 +7,7 @@ import br.com.pintos.inventario.viewmodel.MatriculaViewModel
 import com.vaadin.flow.router.BeforeLeaveEvent
 import com.vaadin.flow.router.Route
 
-@Route("", layout = MainLayout::class)
+//@Route("", layout = MainLayout::class)
 class MatriculaView : LayoutView<MatriculaViewModel>() {
   override val viewModel: MatriculaViewModel
     get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.

@@ -1,47 +1,42 @@
 package br.com.pintos.inventario.view.coletor
 
-import br.com.pintos.inventario.view.coletor.components.AppHeaderLayout
-import br.com.pintos.inventario.view.coletor.components.appDrawer
-import br.com.pintos.inventario.view.coletor.components.appHeader
-import br.com.pintos.inventario.view.coletor.components.appToolbar
-import br.com.pintos.inventario.view.coletor.components.navMenuItem
-import com.github.mvysny.karibudsl.v10.div
-import com.vaadin.flow.component.HasElement
-import com.vaadin.flow.component.dependency.HtmlImport
-import com.vaadin.flow.component.html.Div
-import com.vaadin.flow.component.icon.VaadinIcon
-import com.vaadin.flow.component.page.BodySize
+import br.com.astrosoft.framework.ui.PWALayout
+import br.com.pintos.inventario.view.coletor.pages.ViewEmpty
+import com.vaadin.flow.component.icon.VaadinIcon.ABACUS
+import com.vaadin.flow.component.page.Push
 import com.vaadin.flow.component.page.Viewport
-import com.vaadin.flow.router.RouterLayout
+import com.vaadin.flow.server.PWA
 import com.vaadin.flow.theme.Theme
 import com.vaadin.flow.theme.lumo.Lumo
+import javax.servlet.ServletContextEvent
+import javax.servlet.ServletContextListener
+import javax.servlet.annotation.WebListener
 
-@BodySize(width = "100vw", height = "100vh")
-@HtmlImport("frontend://styles.html")
-@Viewport("width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes")
-@Theme(Lumo::class)
-class MainLayout : AppHeaderLayout(), RouterLayout {
-  private val content: Div
-
+@Push
+@Viewport("width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes")
+@Theme(Lumo::class, variant = Lumo.DARK)
+@PWA(name = "Inventários Pintos", shortName = "Inventário", iconPath = "icons/logo.png", enableInstallPrompt = true)
+class MainLayout: PWALayout() {
   init {
-    appHeader {
-      appToolbar {
-        title.text = "Coletor"
+    init("Inventário") {
+      appMenu {
+        iconHeader("icons/logo.png")
+        item("Teste", ABACUS, ViewEmpty::class.java)
+        item("Teste 2", ABACUS, ViewEmpty::class.java)
       }
     }
-    appDrawer {
-      navMenuItem(VaadinIcon.LIST, "Task List")
-      navMenuItem(VaadinIcon.COG, "Settings")
-      navMenuItem(VaadinIcon.QUESTION, "About")
-    }
-    content = div {
-      setSizeFull()
-      classNames.add("app-content")
-    }
-  }
-
-  override fun showRouterLayoutContent(content: HasElement) {
-    this.content.element.appendChild(content.element)
   }
 }
 
+@WebListener
+class Bootstrap: ServletContextListener {
+  override fun contextDestroyed(sce: ServletContextEvent?) {
+  }
+
+  override fun contextInitialized(sce: ServletContextEvent?) {
+    val home = System.getenv("HOME")
+    val fileName = System.getenv("EBEAN_PROPS") ?: "$home/ebean.col.properties"
+    System.setProperty("ebean.props.file", fileName)
+    println("##################### $fileName")
+  }
+}

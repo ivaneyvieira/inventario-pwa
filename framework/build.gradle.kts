@@ -26,6 +26,10 @@ dependencies {
   compile("io.ebean:ebean-annotation:4.2")
   compile("io.ebean.tools:finder-generator:4.2.2")
 
+  compile ("ch.qos.logback:logback-classic:1.2.3")
+  compile ("org.slf4j:slf4j-api:1.7.25")
+  compile ("org.slf4j:jul-to-slf4j:1.7.25")
+
   compile("mysql:mysql-connector-java:5.1.47")
   compile("org.sql2o:sql2o:1.5.4")
   //Printer Cups
@@ -56,6 +60,7 @@ dependencies {
   compile("org.vaadin.olli:browser-opener:0.3")
   compile("org.claspina:confirm-dialog:1.0.0")
   compile("org.vaadin.crudui:crudui:3.8.1")
+  compile("com.github.appreciated:card:0.9.4")
 }
 
 repositories {

@@ -16,7 +16,7 @@ import com.vaadin.flow.data.converter.StringToIntegerConverter
 import com.vaadin.flow.router.BeforeLeaveEvent
 import com.vaadin.flow.router.Route
 
-@Route(layout = MainLayout::class)
+//@Route(layout = MainLayout::class)
 class ColetaView : LayoutView<ColetaViewModel>() {
   override val viewModel: ColetaViewModel
     get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
