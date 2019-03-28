@@ -47,25 +47,36 @@ class MainPage: VerticalLayout() {
       println("Print...")
     }
   }
-  val toolbar = AppToolbar().apply {
+  val toolbar = HorizontalLayout().apply {
     width = "100%"
-    add("Inventário")
+    style.set("background-color", "#0000ff")
+    style.set("padding", "0px 5px")
+    val label = Label("Inventário")
+    label.style.set("color", "#ffffff")
+    label.style.set("font-weightcd git  /inve ", "bold")
+    add(label)
   }
   val textField = TextField().apply {
     width = "100%"
   }
 
   init {
+    isPadding = false
+
     val layout = VerticalLayout().apply {
-      add(toolbar)
       add(cardInventario)
       add(cardUsuario)
       add(cardLote)
       add(cardLeitura)
-      isMargin = false
     }
     expand(layout)
-    add(layout, textField)
+    val layoutTextField = HorizontalLayout().apply {
+      width = "100%"
+      //this.isMargin = true
+      add(textField)
+      expand(textField)
+    }
+    add(toolbar, layout, layoutTextField)
     height = "100%"
   }
 }
