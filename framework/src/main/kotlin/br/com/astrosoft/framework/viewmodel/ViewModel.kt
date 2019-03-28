@@ -11,7 +11,7 @@ abstract class ViewModel(val view: IView) {
         view.showError(e.message)
       }
     }
-    view.updateView(this)
+    view.updateView()
   }
 
   private fun updateModel() {
@@ -96,7 +96,7 @@ abstract class ViewModel(val view: IView) {
 class EViewModel(msg: String) : Exception(msg)
 
 interface IView {
-  fun updateView(viewModel: ViewModel)
+  fun updateView()
 
   fun updateModel()
 

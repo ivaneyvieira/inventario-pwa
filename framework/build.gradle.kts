@@ -61,6 +61,7 @@ dependencies {
   compile("org.claspina:confirm-dialog:1.0.0")
   compile("org.vaadin.crudui:crudui:3.8.1")
   compile("com.github.appreciated:card:0.9.4")
+  compile("org.vaadin.marcus:shortcut:0.3.0")
 }
 
 repositories {

@@ -30,10 +30,13 @@ abstract class LayoutView<V : ViewModel> : VerticalLayout(), View, IView {
   }
 
   override fun beforeEnter(event: BeforeEnterEvent) {
-    updateView(viewModel)
+    updateView()
   }
 
-  abstract override fun beforeLeave(event: BeforeLeaveEvent)
+  override fun beforeLeave(event: BeforeLeaveEvent) {
+
+  }
+
 
   fun <T> Grid<T>.actionSelected(msgErro: String = "Selecione um item", action: (T) -> Unit) {
     this.selectedItems.firstOrNull()?.let { item -> action(item) }

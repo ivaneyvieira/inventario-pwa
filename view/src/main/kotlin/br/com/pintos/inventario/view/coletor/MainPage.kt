@@ -1,20 +1,27 @@
 package br.com.pintos.inventario.view.coletor
 
 import br.com.astrosoft.framework.ui.view.LayoutView
-import br.com.astrosoft.framework.viewmodel.ViewModel
+import br.com.pintos.inventario.model.Coleta
+import br.com.pintos.inventario.model.Inventario
+import br.com.pintos.inventario.model.Lote
+import br.com.pintos.inventario.model.Usuario
 import br.com.pintos.inventario.viewmodel.ViewModelColetor
-import com.github.appreciated.app.layout.webcomponents.applayout.AppToolbar
 import com.github.appreciated.card.RippleClickableCard
 import com.github.appreciated.card.label.PrimaryLabel
+import com.github.mvysny.karibudsl.v10.textField
+import com.vaadin.flow.component.Key
+import com.vaadin.flow.component.button.Button
+import com.vaadin.flow.component.button.ButtonVariant
 import com.vaadin.flow.component.html.Image
 import com.vaadin.flow.component.html.Label
+import com.vaadin.flow.component.orderedlayout.FlexComponent
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment.CENTER
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout
 import com.vaadin.flow.component.orderedlayout.VerticalLayout
 import com.vaadin.flow.component.textfield.TextField
-import com.vaadin.flow.router.BeforeLeaveEvent
 import com.vaadin.flow.router.Route
 import com.vaadin.flow.server.PWA
+import org.vaadin.marcus.shortcut.Shortcut
 
 //@Push
 //@Viewport("width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes")
@@ -23,45 +30,52 @@ import com.vaadin.flow.server.PWA
      themeColor = "0000ff", display = "fullscreen")
 @Route("")
 class MainPage: LayoutView<ViewModelColetor>() {
-  override val viewModel: ViewModelColetor
-    get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
+  override val viewModel: ViewModelColetor = ViewModelColetor(this)
 
-  override fun beforeLeave(event: BeforeLeaveEvent) {
-    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-  }
+  override fun updateView() {
+    cardInventario.value = viewModel.inventario
+    cardUsuario.value = viewModel.usuario
+    cardLote.value = viewModel.lote
+    cardColeta.value = viewModel.coleta
 
-  override fun updateView(viewModel: ViewModel) {
-    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    textField.label = viewModel.labelField
   }
 
   override fun updateModel() {
-    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    viewModel.inventario = cardInventario.value
+    viewModel.usuario = cardUsuario.value
+    viewModel.lote = cardLote.value
+    viewModel.coleta = cardColeta.value
   }
 
-  val cardUsuario = CardMenu("Usuário", "icons/user.png").apply {
-    width = "100%"
-    descricao = "."
+  val cardUsuario = cardMenu<Usuario>("Usuário", "icons/user.png") {
+    descricao {
+      it.nome
+    }
     this.addClickListener {
       println("Print...")
     }
   }
-  val cardInventario = CardMenu("Inventário", "icons/inventario.png").apply {
-    width = "100%"
-    descricao = "."
+  val cardInventario = cardMenu<Inventario>("Inventário", "icons/inventario.png") {
+    descricao {
+      it.numero.toString()
+    }
     this.addClickListener {
       println("Print...")
     }
   }
-  val cardLote = CardMenu("Lote", "icons/lote.png").apply {
-    width = "100%"
-    descricao = "."
+  val cardLote = cardMenu<Lote>("Lote", "icons/lote.png") {
+    descricao {
+      it.numero
+    }
     this.addClickListener {
       println("Print...")
     }
   }
-  val cardLeitura = CardMenu("Leitura", "icons/leitura.png").apply {
-    width = "100%"
-    descricao = "."
+  val cardColeta = cardMenu<Coleta>("Coleta", "icons/leitura.png") {
+    descricao {
+      it.numleitura.toString()
+    }
     this.addClickListener {
       println("Print...")
     }
@@ -72,12 +86,20 @@ class MainPage: LayoutView<ViewModelColetor>() {
     style.set("padding", "0px 5px")
     val label = Label("Inventário")
     label.style.set("color", "#ffffff")
-    label.style.set("font-weightcd git  /inve ", "bold")
+    label.style.set("font-weight", "bold")
     add(label)
   }
-  val textField = TextField().apply {
+  val textField = TextField("Código de barras").apply {
     width = "100%"
+    isAutofocus = true
+    isClearButtonVisible = true
+    val onEnter = Shortcut.Listener {
+      println("Enter")
+      this.value = ""
+    }
+    Shortcut.add(this, Key.ENTER, onEnter)
   }
+
 
   init {
     isPadding = false
@@ -86,26 +108,39 @@ class MainPage: LayoutView<ViewModelColetor>() {
       add(cardInventario)
       add(cardUsuario)
       add(cardLote)
-      add(cardLeitura)
+      add(cardColeta)
     }
     expand(layout)
     val layoutTextField = HorizontalLayout().apply {
       width = "100%"
-      //this.isMargin = true
-      add(textField)
       expand(textField)
+      style.set("pading", "0px 5px")
+      add(textField)
     }
     add(toolbar, layout, layoutTextField)
     height = "100%"
   }
+
+  fun <T> cardMenu(title: String, src: String, block: CardMenu<T>.() -> Unit): CardMenu<T> {
+    val cardMenu = CardMenu<T>(title, src)
+    cardMenu.block()
+    cardMenu.width = "100%"
+    return cardMenu
+  }
 }
 
-class CardMenu(val title: String, val src: String): RippleClickableCard() {
-  var descricao
-    get() = secondaryLabel.text
+class CardMenu<T>(title: String, src: String): RippleClickableCard() {
+  var value: T? = null
     set(value) {
-      secondaryLabel.text = value
+      field = value
+      secondaryLabel.text = if(value == null) "Não informado" else descricao(value)
     }
+  private var descricao: (T) -> String = {""}
+
+  fun descricao(desc: (T) -> String) {
+    descricao = desc
+  }
+
   val primaryLabel = PrimaryLabel(title)
   val secondaryLabel = Label("")
 
@@ -116,14 +151,15 @@ class CardMenu(val title: String, val src: String): RippleClickableCard() {
     layout.isSpacing = false
     layout.isMargin = false
     layout.isPadding = false
-    layout.expand(primaryLabel)
+    layout.expand(primaryLabel, secondaryLabel)
     layout.add(IconImage(src), primaryLabel, secondaryLabel)
+    layout.style.set("padding", "0px 5px")
     add(layout)
   }
 }
 
 class IconImage(src: String): Image(src, "Icon") {
-  val SIZE = "32px"
+  val SIZE = "48px"
 
   init {
     width = SIZE
