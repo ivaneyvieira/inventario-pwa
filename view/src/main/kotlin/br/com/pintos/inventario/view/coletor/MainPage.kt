@@ -1,5 +1,8 @@
 package br.com.pintos.inventario.view.coletor
 
+import br.com.astrosoft.framework.ui.view.LayoutView
+import br.com.astrosoft.framework.viewmodel.ViewModel
+import br.com.pintos.inventario.viewmodel.ViewModelColetor
 import com.github.appreciated.app.layout.webcomponents.applayout.AppToolbar
 import com.github.appreciated.card.RippleClickableCard
 import com.github.appreciated.card.label.PrimaryLabel
@@ -9,6 +12,7 @@ import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment.CENTER
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout
 import com.vaadin.flow.component.orderedlayout.VerticalLayout
 import com.vaadin.flow.component.textfield.TextField
+import com.vaadin.flow.router.BeforeLeaveEvent
 import com.vaadin.flow.router.Route
 import com.vaadin.flow.server.PWA
 
@@ -18,7 +22,22 @@ import com.vaadin.flow.server.PWA
 @PWA(name = "Inventários Pintos", shortName = "Inventário", iconPath = "icons/logo.png", enableInstallPrompt = true,
      themeColor = "0000ff", display = "fullscreen")
 @Route("")
-class MainPage: VerticalLayout() {
+class MainPage: LayoutView<ViewModelColetor>() {
+  override val viewModel: ViewModelColetor
+    get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
+
+  override fun beforeLeave(event: BeforeLeaveEvent) {
+    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+  }
+
+  override fun updateView(viewModel: ViewModel) {
+    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+  }
+
+  override fun updateModel() {
+    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+  }
+
   val cardUsuario = CardMenu("Usuário", "icons/user.png").apply {
     width = "100%"
     descricao = "."
