@@ -1,6 +1,6 @@
 package br.com.pintos.inventario.model
 
-import br.com.astrosoft.framework.model.BaseModel
+import br.com.astrosoft.framework.model.SimpleBaseModel
 import br.com.pintos.inventario.model.finder.ProdutoFinder
 import javax.persistence.Entity
 import javax.persistence.ManyToOne
@@ -20,7 +20,7 @@ class Produto(
         var cl: CL,
         @ManyToOne
         var fornecedor: Fornecedor
-) : BaseModel() {
+) : SimpleBaseModel() {
     companion object Find : ProdutoFinder() {
       fun findLeitura(leitura: String): Produto? {
         return where().barcode.eq(leitura).findList().firstOrNull()

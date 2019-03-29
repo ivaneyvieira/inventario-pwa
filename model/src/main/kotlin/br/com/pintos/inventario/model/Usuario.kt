@@ -1,6 +1,6 @@
 package br.com.pintos.inventario.model
 
-import br.com.astrosoft.framework.model.BaseModel
+import br.com.astrosoft.framework.model.SimpleBaseModel
 import br.com.pintos.inventario.model.finder.UsuarioFinder
 import javax.persistence.Entity
 import javax.persistence.Table
@@ -12,7 +12,7 @@ class Usuario(
   var nome: String,
   var senha: String,
   var apelido: String
-) : BaseModel() {
+) : SimpleBaseModel() {
   companion object Find : UsuarioFinder() {
     fun find(matricula: Int?): Usuario? {
       matricula ?: return null

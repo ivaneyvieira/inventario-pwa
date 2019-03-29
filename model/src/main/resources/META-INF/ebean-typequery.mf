@@ -1,0 +1,2 @@
+packages: br.com.pintos.inventario.model.query
+

@@ -1,7 +1,7 @@
 package br.com.pintos.inventario.model
 
 
-import br.com.astrosoft.framework.model.BaseModel
+import br.com.astrosoft.framework.model.SimpleBaseModel
 import br.com.pintos.inventario.model.EStatusColeta.ABERTO
 import br.com.pintos.inventario.model.finder.ColetaFinder
 import javax.persistence.Entity
@@ -25,7 +25,7 @@ class Coleta(
   var coletor: Int,
   @Enumerated(EnumType.STRING)
   var status: EStatusColeta
-) : BaseModel() {
+) : SimpleBaseModel() {
   fun quantidadeLeitura(): Int {
     return Leitura.where()
             .coleta.id.eq(id)
@@ -54,6 +54,16 @@ class Coleta(
               .asSequence()
               .map { it.numleitura }
               .max() ?: 0) + 1
+    }
+
+    fun novaColetaAberta(inventario: Inventario?, lote: Lote?, usuario: Usuario?): Coleta? {
+      inventario ?: return null
+      lote ?: return null
+      usuario ?: return null
+      val novoNumero = novoNumero(inventario, lote)
+      return Coleta(novoNumero, inventario, lote, usuario, 0, ABERTO).apply {
+        save()
+      }
     }
   }
 }

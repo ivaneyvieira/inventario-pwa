@@ -11,13 +11,21 @@ import javax.persistence.MappedSuperclass
 import javax.persistence.Version
 
 @MappedSuperclass
-abstract class BaseModel(
+abstract class CompleteBaseModel(
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   var id: Long = 0,
   @WhenCreated
-  var createdAt: LocalDateTime = LocalDateTime.now(),
+  var createdAt: LocalDateTime? = LocalDateTime.now(),
   @WhenModified
-  var updatedAt: LocalDateTime = LocalDateTime.now(),
+  var updatedAt: LocalDateTime? = LocalDateTime.now(),
   @Version
-  var version: Int = 0) : Model()
+  var version: Int? = 0) : Model()
+
+@MappedSuperclass
+abstract class SimpleBaseModel(
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  var id: Long = 0,
+  @Version
+  var version: Int? = 0) : Model()

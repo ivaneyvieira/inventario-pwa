@@ -26,6 +26,9 @@ object Transaction {
     } catch (error: Error) {
       Ebean.rollbackTransaction()
       throw Exception(error)
+    } catch (error: Throwable) {
+      Ebean.rollbackTransaction()
+      throw Exception(error)
     } finally {
       Ebean.endTransaction()
     }

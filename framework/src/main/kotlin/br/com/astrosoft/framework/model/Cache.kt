@@ -9,7 +9,7 @@ open class Cache<T>(val initializer: () -> T?) {
 
   protected fun composeKey(thisRef: Any?, property: KProperty<*>): String {
     val classe = thisRef?.javaClass?.simpleName
-    return if (thisRef is BaseModel) {
+    return if (thisRef is SimpleBaseModel) {
       val id = thisRef.id
       "$classe:$id:${property.name}"
     }

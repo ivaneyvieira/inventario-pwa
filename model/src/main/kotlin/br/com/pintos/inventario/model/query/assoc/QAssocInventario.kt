@@ -3,12 +3,14 @@ package br.com.pintos.inventario.model.query.assoc
 import br.com.pintos.inventario.model.EStatusInventario
 import br.com.pintos.inventario.model.ETipoInventario
 import br.com.pintos.inventario.model.Inventario
+import br.com.pintos.inventario.model.query.QInventario
 import io.ebean.typequery.PEnum
 import io.ebean.typequery.PInteger
 import io.ebean.typequery.PLocalDate
 import io.ebean.typequery.PLong
 import io.ebean.typequery.PString
 import io.ebean.typequery.TQAssocBean
+import io.ebean.typequery.TQProperty
 import io.ebean.typequery.TypeQueryBean
 
 /**
