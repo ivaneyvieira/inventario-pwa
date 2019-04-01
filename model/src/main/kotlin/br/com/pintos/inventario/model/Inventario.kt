@@ -1,6 +1,6 @@
 package br.com.pintos.inventario.model
 
-import br.com.astrosoft.framework.model.BaseModel
+import br.com.astrosoft.framework.model.SimpleBaseModel
 import br.com.pintos.inventario.model.EStatusInventario.ABERTO
 import br.com.pintos.inventario.model.finder.InventarioFinder
 import io.ebean.annotation.DbEnumValue
@@ -30,7 +30,7 @@ class Inventario(
         var fornecedor: Fornecedor?,
         @ManyToOne
         var cl: CL?
-) : BaseModel() {
+) : SimpleBaseModel() {
     companion object Find : InventarioFinder() {
       fun inventariosAberto(): List<Inventario> {
         return where()

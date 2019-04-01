@@ -1,13 +1,13 @@
 package br.com.astrosoft.framework.viewmodel
 
-import br.com.astrosoft.framework.model.BaseModel
+import br.com.astrosoft.framework.model.SimpleBaseModel
 import io.ebean.PagedList
 import io.ebean.typequery.TQRootBean
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import kotlin.reflect.KClass
 
-abstract class CrudViewModel<MODEL : BaseModel, Q : TQRootBean<MODEL, Q>, VO : EntityVo<MODEL>>
+abstract class CrudViewModel<MODEL : SimpleBaseModel, Q : TQRootBean<MODEL, Q>, VO : EntityVo<MODEL>>
 (view: IView, val crudClass: KClass<VO>) : ViewModel(view) {
   private var queryView: QueryView? = null
   private var pagedList: PagedList<MODEL>? = null
@@ -113,7 +113,7 @@ abstract class CrudViewModel<MODEL : BaseModel, Q : TQRootBean<MODEL, Q>, VO : E
 
 data class Sort(val propertyName: String, val descending: Boolean = false)
 
-abstract class EntityVo<MODEL : BaseModel> {
+abstract class EntityVo<MODEL : SimpleBaseModel> {
   open var entityVo: MODEL? = null
   var readOnly: Boolean = false
 

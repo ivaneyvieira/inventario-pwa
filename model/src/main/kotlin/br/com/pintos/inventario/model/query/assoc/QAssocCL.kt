@@ -1,10 +1,12 @@
 package br.com.pintos.inventario.model.query.assoc
 
 import br.com.pintos.inventario.model.CL
+import br.com.pintos.inventario.model.query.QCL
 import io.ebean.typequery.PInteger
 import io.ebean.typequery.PLong
 import io.ebean.typequery.PString
 import io.ebean.typequery.TQAssocBean
+import io.ebean.typequery.TQProperty
 import io.ebean.typequery.TypeQueryBean
 
 /**

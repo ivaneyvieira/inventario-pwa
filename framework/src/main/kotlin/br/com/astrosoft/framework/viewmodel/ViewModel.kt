@@ -3,7 +3,7 @@ package br.com.astrosoft.framework.viewmodel
 import br.com.astrosoft.framework.model.Transaction
 
 abstract class ViewModel(val view: IView) {
-  private var inExcection = false
+  private var inExcursion = false
 
   private fun updateView(exception: EViewModel? = null) {
     exception?.let { e ->
@@ -23,18 +23,18 @@ abstract class ViewModel(val view: IView) {
     var ret: T? = null
     transaction {
       try {
-        if (inExcection) ret = block()
+        if (inExcursion) ret = block()
         else {
-          inExcection = true
+          inExcursion = true
           updateModel()
 
           ret = block()
 
           updateView()
-          inExcection = false
+          inExcursion = false
         }
       } catch (e: EViewModel) {
-        inExcection = false
+        inExcursion = false
         updateView(e)
       }
     }
@@ -57,19 +57,19 @@ abstract class ViewModel(val view: IView) {
   fun exec(block: () -> Unit) {
     transaction {
       try {
-        if (inExcection) block()
+        if (inExcursion) block()
         else {
-          inExcection = true
+          inExcursion = true
           updateModel()
 
           block()
 
           updateView()
-          inExcection = false
+          inExcursion = false
         }
       } catch (e: EViewModel) {
         updateView(e)
-        inExcection = false
+        inExcursion = false
         throw e
       }
     }

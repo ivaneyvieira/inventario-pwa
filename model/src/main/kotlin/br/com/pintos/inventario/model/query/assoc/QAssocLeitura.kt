@@ -2,12 +2,14 @@ package br.com.pintos.inventario.model.query.assoc
 
 import br.com.pintos.inventario.model.EStatusLeitura
 import br.com.pintos.inventario.model.Leitura
+import br.com.pintos.inventario.model.query.QLeitura
 import io.ebean.typequery.PEnum
 import io.ebean.typequery.PInteger
 import io.ebean.typequery.PLocalTime
 import io.ebean.typequery.PLong
 import io.ebean.typequery.PString
 import io.ebean.typequery.TQAssocBean
+import io.ebean.typequery.TQProperty
 import io.ebean.typequery.TypeQueryBean
 
 /**

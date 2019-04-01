@@ -1,50 +1,57 @@
 package br.com.pintos.inventario.view.coletor
 
+import br.com.astrosoft.framework.ui.Session
 import br.com.astrosoft.framework.ui.view.LayoutView
 import br.com.pintos.inventario.model.Coleta
 import br.com.pintos.inventario.model.Inventario
-import br.com.pintos.inventario.model.Lote
 import br.com.pintos.inventario.model.Usuario
 import br.com.pintos.inventario.viewmodel.ViewModelColetor
 import com.github.appreciated.card.RippleClickableCard
 import com.github.appreciated.card.label.PrimaryLabel
-import com.github.mvysny.karibudsl.v10.textField
-import com.vaadin.flow.component.Key
-import com.vaadin.flow.component.button.Button
-import com.vaadin.flow.component.button.ButtonVariant
+import com.vaadin.flow.component.grid.Grid
+import com.vaadin.flow.component.grid.GridVariant.LUMO_COMPACT
+import com.vaadin.flow.component.grid.GridVariant.LUMO_WRAP_CELL_CONTENT
 import com.vaadin.flow.component.html.Image
 import com.vaadin.flow.component.html.Label
-import com.vaadin.flow.component.orderedlayout.FlexComponent
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment.CENTER
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout
 import com.vaadin.flow.component.orderedlayout.VerticalLayout
+import com.vaadin.flow.component.page.Push
 import com.vaadin.flow.component.textfield.TextField
 import com.vaadin.flow.router.Route
 import com.vaadin.flow.server.PWA
-import org.vaadin.marcus.shortcut.Shortcut
 
-//@Push
+@Push
 //@Viewport("width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes")
 //@Theme(Lumo::class)
 @PWA(name = "Inventários Pintos", shortName = "Inventário", iconPath = "icons/logo.png", enableInstallPrompt = true,
      themeColor = "0000ff", display = "fullscreen")
 @Route("")
 class MainPage: LayoutView<ViewModelColetor>() {
-  override val viewModel: ViewModelColetor = ViewModelColetor(this)
+  override val viewModel: ViewModelColetor
+    get() {
+      if(Session[ViewModelColetor::class] == null) Session[ViewModelColetor::class] = ViewModelColetor(this)
+      return Session[ViewModelColetor::class]!!
+    }
 
   override fun updateView() {
     cardInventario.value = viewModel.inventario
     cardUsuario.value = viewModel.usuario
-    cardLote.value = viewModel.lote
     cardColeta.value = viewModel.coleta
+    val itens = viewModel.leituras.sortedBy {-it.id}
+      .map {ItemProduto(it.id, it.observacao)}
+    listLeitura.setItems(itens)
+    itens.firstOrNull()
+      ?.let {listLeitura.select(it)}
+
 
     textField.label = viewModel.labelField
+    textField.focus()
   }
 
   override fun updateModel() {
     viewModel.inventario = cardInventario.value
     viewModel.usuario = cardUsuario.value
-    viewModel.lote = cardLote.value
     viewModel.coleta = cardColeta.value
   }
 
@@ -64,22 +71,15 @@ class MainPage: LayoutView<ViewModelColetor>() {
       println("Print...")
     }
   }
-  val cardLote = cardMenu<Lote>("Lote", "icons/lote.png") {
+  val cardColeta = cardMenu<Coleta>("Lote", "icons/lote.png") {
     descricao {
-      it.numero
+      "${it.lote.numero}/${it.numleitura}"
     }
     this.addClickListener {
       println("Print...")
     }
   }
-  val cardColeta = cardMenu<Coleta>("Coleta", "icons/leitura.png") {
-    descricao {
-      it.numleitura.toString()
-    }
-    this.addClickListener {
-      println("Print...")
-    }
-  }
+
   val toolbar = HorizontalLayout().apply {
     width = "100%"
     style.set("background-color", "#0000ff")
@@ -92,32 +92,36 @@ class MainPage: LayoutView<ViewModelColetor>() {
   val textField = TextField("Código de barras").apply {
     width = "100%"
     isAutofocus = true
-    isClearButtonVisible = true
-    val onEnter = Shortcut.Listener {
-      println("Enter")
-      this.value = ""
+    addValueChangeListener {
+      if(it.isFromClient) {
+        viewModel.processaLeitura(it.value)
+        this.clear()
+        this.focus()
+      }
     }
-    Shortcut.add(this, Key.ENTER, onEnter)
   }
-
+  val listLeitura = Grid<ItemProduto>().apply {
+    this.addThemeVariants(LUMO_COMPACT, LUMO_WRAP_CELL_CONTENT)
+    addColumn(ItemProduto::descricao).apply {
+      setHeader("Leituras")
+    }
+    this.isEnabled = false
+  }
 
   init {
     isPadding = false
+    isSpacing = false
 
     val layout = VerticalLayout().apply {
       add(cardInventario)
       add(cardUsuario)
-      add(cardLote)
       add(cardColeta)
+      expand(listLeitura)
+      add(cardInventario, cardUsuario, cardColeta, listLeitura, textField)
     }
+
     expand(layout)
-    val layoutTextField = HorizontalLayout().apply {
-      width = "100%"
-      expand(textField)
-      style.set("pading", "0px 5px")
-      add(textField)
-    }
-    add(toolbar, layout, layoutTextField)
+    add(toolbar, layout)
     height = "100%"
   }
 
@@ -142,7 +146,10 @@ class CardMenu<T>(title: String, src: String): RippleClickableCard() {
   }
 
   val primaryLabel = PrimaryLabel(title)
-  val secondaryLabel = Label("")
+  val secondaryLabel = Label("").apply {
+    width = "100%"
+    style.set("text-align", "right")
+  }
 
   init {
     val layout = HorizontalLayout()
@@ -152,6 +159,7 @@ class CardMenu<T>(title: String, src: String): RippleClickableCard() {
     layout.isMargin = false
     layout.isPadding = false
     layout.expand(primaryLabel, secondaryLabel)
+    //secondaryLabel.horizontalAlignSelf = END
     layout.add(IconImage(src), primaryLabel, secondaryLabel)
     layout.style.set("padding", "0px 5px")
     add(layout)
@@ -166,3 +174,5 @@ class IconImage(src: String): Image(src, "Icon") {
     height = SIZE
   }
 }
+
+data class ItemProduto(val id : Long, val descricao: String)

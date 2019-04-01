@@ -2,10 +2,12 @@ package br.com.pintos.inventario.model.query.assoc
 
 import br.com.pintos.inventario.model.Coleta
 import br.com.pintos.inventario.model.EStatusColeta
+import br.com.pintos.inventario.model.query.QColeta
 import io.ebean.typequery.PEnum
 import io.ebean.typequery.PInteger
 import io.ebean.typequery.PLong
 import io.ebean.typequery.TQAssocBean
+import io.ebean.typequery.TQProperty
 import io.ebean.typequery.TypeQueryBean
 
 /**

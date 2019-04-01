@@ -1,6 +1,6 @@
 package br.com.pintos.inventario.model
 
-import br.com.astrosoft.framework.model.BaseModel
+import br.com.astrosoft.framework.model.SimpleBaseModel
 import br.com.pintos.inventario.model.finder.LoteFinder
 import javax.persistence.Entity
 import javax.persistence.ManyToOne
@@ -14,7 +14,7 @@ class Lote(
   var numero: String,
   @ManyToOne
   var loja: Loja
-) : BaseModel() {
+) : SimpleBaseModel() {
   companion object Find : LoteFinder() {
     fun findNumLote(numLote: String?, loja: Loja?): Lote? {
       numLote ?: return null

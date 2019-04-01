@@ -1,6 +1,6 @@
 package br.com.pintos.inventario.model
 
-import br.com.astrosoft.framework.model.BaseModel
+import br.com.astrosoft.framework.model.SimpleBaseModel
 import br.com.pintos.inventario.model.finder.FornecedorFinder
 import javax.persistence.Entity
 import javax.persistence.Table
@@ -9,6 +9,6 @@ import javax.persistence.Table
 @Table(name = "fornecedor")
 class Fornecedor(
         var codigo: String, var fantazia: String, var razao: String
-) : BaseModel() {
+) : SimpleBaseModel() {
     companion object Find : FornecedorFinder()
 }
