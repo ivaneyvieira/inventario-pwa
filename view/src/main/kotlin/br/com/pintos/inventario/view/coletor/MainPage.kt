@@ -8,22 +8,29 @@ import br.com.pintos.inventario.model.Usuario
 import br.com.pintos.inventario.viewmodel.ViewModelColetor
 import com.github.appreciated.card.RippleClickableCard
 import com.github.appreciated.card.label.PrimaryLabel
+import com.github.mvysny.karibudsl.v10.select
 import com.vaadin.flow.component.grid.Grid
 import com.vaadin.flow.component.grid.GridVariant.LUMO_COMPACT
 import com.vaadin.flow.component.grid.GridVariant.LUMO_WRAP_CELL_CONTENT
 import com.vaadin.flow.component.html.Image
 import com.vaadin.flow.component.html.Label
+import com.vaadin.flow.component.listbox.ListBox
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment.CENTER
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout
 import com.vaadin.flow.component.orderedlayout.VerticalLayout
 import com.vaadin.flow.component.page.Push
+import com.vaadin.flow.component.page.Viewport
 import com.vaadin.flow.component.textfield.TextField
+import com.vaadin.flow.data.renderer.ComponentRenderer
 import com.vaadin.flow.router.Route
 import com.vaadin.flow.server.PWA
+import com.vaadin.flow.theme.Theme
+import com.vaadin.flow.theme.lumo.Lumo
+import sun.security.util.PropertyExpander.expand
 
 @Push
-//@Viewport("width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes")
-//@Theme(Lumo::class)
+@Viewport("width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes")
+@Theme(Lumo::class)
 @PWA(name = "Inventários Pintos", shortName = "Inventário", iconPath = "icons/logo.png", enableInstallPrompt = true,
      themeColor = "0000ff", display = "fullscreen")
 @Route("")
@@ -39,11 +46,9 @@ class MainPage: LayoutView<ViewModelColetor>() {
     cardUsuario.value = viewModel.usuario
     cardColeta.value = viewModel.coleta
     val itens = viewModel.leituras.sortedBy {-it.id}
-      .map {ItemProduto(it.id, it.observacao)}
-    listLeitura.setItems(itens)
-    itens.firstOrNull()
-      ?.let {listLeitura.select(it)}
-
+      .map {it.observacao}
+    val last = if(itens.size <= 5) itens.size else 5
+    listLeitura.setItems(itens.subList(0, last))
 
     textField.label = viewModel.labelField
     textField.focus()
@@ -100,29 +105,25 @@ class MainPage: LayoutView<ViewModelColetor>() {
       }
     }
   }
-  val listLeitura = Grid<ItemProduto>().apply {
-    this.addThemeVariants(LUMO_COMPACT, LUMO_WRAP_CELL_CONTENT)
-    addColumn(ItemProduto::descricao).apply {
-      setHeader("Leituras")
-    }
-    this.isEnabled = false
+  val listLeitura = ListBox<String>().apply {
+    //this.height = "300px"
+    //this.isEnabled = false
+    //this.width = "100%"
   }
 
   init {
-    isPadding = false
-    isSpacing = false
 
     val layout = VerticalLayout().apply {
       add(cardInventario)
       add(cardUsuario)
       add(cardColeta)
-      expand(listLeitura)
-      add(cardInventario, cardUsuario, cardColeta, listLeitura, textField)
+      //expand(listLeitura)
+      add(textField, cardInventario, cardUsuario, cardColeta, listLeitura )
     }
 
-    expand(layout)
+   // expand(layout)
     add(toolbar, layout)
-    height = "100%"
+    //height = "100%"
   }
 
   fun <T> cardMenu(title: String, src: String, block: CardMenu<T>.() -> Unit): CardMenu<T> {

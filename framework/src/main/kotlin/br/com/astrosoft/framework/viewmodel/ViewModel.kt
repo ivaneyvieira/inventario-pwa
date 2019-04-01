@@ -2,7 +2,7 @@ package br.com.astrosoft.framework.viewmodel
 
 import br.com.astrosoft.framework.model.Transaction
 
-abstract class ViewModel(val view: IView) {
+abstract class ViewModel(private val view: IView) {
   private var inExcursion = false
 
   private fun updateView(exception: EViewModel? = null) {

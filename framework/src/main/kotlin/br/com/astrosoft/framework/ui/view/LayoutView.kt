@@ -7,6 +7,7 @@ import com.github.mvysny.karibudsl.v10.VaadinDsl
 import com.github.mvysny.karibudsl.v10.h2
 import com.vaadin.flow.component.UI
 import com.vaadin.flow.component.grid.Grid
+import com.vaadin.flow.component.html.Div
 import com.vaadin.flow.component.orderedlayout.VerticalLayout
 import com.vaadin.flow.router.BeforeEnterEvent
 import com.vaadin.flow.router.BeforeEnterObserver
@@ -23,7 +24,6 @@ abstract class LayoutView<V : ViewModel> : VerticalLayout(), View, IView {
   abstract val viewModel: V
 
   fun form(titleForm: String, block: (@VaadinDsl VerticalLayout).() -> Unit = {}) {
-    isMargin = true
     setSizeFull()
     h2(titleForm)
     this.block()

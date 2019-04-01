@@ -11,8 +11,10 @@ dependencies {
   compile(project(":framework"))
   compile(project(":viewmodel"))
 
-  implementation("org.springframework.boot:spring-boot-starter-web")
-  implementation("org.springframework.boot:spring-boot-starter-tomcat")
+  compile("org.springframework.boot:spring-boot-starter-web")
+  compile("org.springframework.boot:spring-boot-starter-tomcat")
+  compile("org.springframework.boot:spring-boot-starter-security")
+  compile("org.springframework.session:spring-session:1.3.5.RELEASE")
 }
 val compileKotlin: KotlinCompile by tasks
 compileKotlin.kotlinOptions {
