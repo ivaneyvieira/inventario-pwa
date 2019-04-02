@@ -12,28 +12,30 @@ import br.com.pintos.inventario.viewmodel.TipoLeitura.COLETA
 import br.com.pintos.inventario.viewmodel.TipoLeitura.INVENTARIO
 import br.com.pintos.inventario.viewmodel.TipoLeitura.LOTE
 import br.com.pintos.inventario.viewmodel.TipoLeitura.MATRICULA
+import io.ebean.annotation.Expose
 
 class ViewModelColetor(view : IView) : ViewModel(view){
+  @field:Expose
   var inventario: Inventario? = null
+  @field:Expose
   var usuario: Usuario? = null
+  @field:Expose
   var coleta: Coleta? = null
-
-  val tipoLeitura: TipoLeitura
+  val tipoLeitura
     get() = when {
       inventario == null -> INVENTARIO
       usuario == null    -> MATRICULA
-      coleta == null       -> LOTE
+      coleta == null     -> LOTE
       else               -> COLETA
     }
-  val labelField: String
+  val labelField
     get() = when(tipoLeitura) {
       MATRICULA  -> "Matrícula do usuário"
       INVENTARIO -> "Número do inventário"
       LOTE       -> "Número do lote"
       COLETA     -> "Código de barras"
     }
-  val leituras : List<Leitura>
-  get() = Leitura.findLeituras(coleta)
+  val leituras get() = Leitura.findLeituras(coleta)
 
   init {
     updateModel()
@@ -41,10 +43,8 @@ class ViewModelColetor(view : IView) : ViewModel(view){
 
   fun updateModel() {
     val inventariosAbertos = Inventario.inventariosAberto()
-    if(inventariosAbertos.size == 1)
-      inventario = inventariosAbertos[0]
-    else
-      inventario = null
+    if(inventariosAbertos.size == 1) inventario = inventariosAbertos[0]
+    else inventario = null
   }
 
   fun processaLeitura(value: String) = exec {
@@ -67,8 +67,7 @@ class ViewModelColetor(view : IView) : ViewModel(view){
     val loja = inventario?.loja ?: throw EViewModel("Loja não identificada no iventário")
     val lote = Lote.findNumLote(value, loja) ?: throw EViewModel("Lote não encontrado")
     coleta = Coleta.findColetaAberta(inventario, lote, usuario)
-    if(coleta == null)
-      coleta = Coleta.novaColetaAberta(inventario, lote, usuario)
+    if(coleta == null) coleta = Coleta.novaColetaAberta(inventario, lote, usuario)
     else
       throw EViewModel("Já existe uma coleta aberta")
   }
@@ -77,17 +76,17 @@ class ViewModelColetor(view : IView) : ViewModel(view){
     val numero = value.toIntOrNull() ?: throw EViewModel("O número do inventário é inválido")
     val inventariosAberto = Inventario.inventariosAberto()
     if(inventariosAberto.isEmpty()) throw EViewModel("Não existe nenhum inventário aberto")
-    this.inventario = inventariosAberto.firstOrNull {it.numero == numero} ?: throw EViewModel(
+    inventario = inventariosAberto.firstOrNull {it.numero == numero} ?: throw EViewModel(
       "Nenum ivnetnario aberto encontrado com este número")
   }
 
   private fun processaMatricula(value: String) {
     val matricula = value.toIntOrNull() ?: throw EViewModel("Matrícula inválida")
-    this.usuario = Usuario.find(matricula) ?: throw EViewModel("Matrícula não encontrada")
+    usuario = Usuario.find(matricula) ?: throw EViewModel("Matrícula não encontrada")
   }
 }
-
 
 enum class TipoLeitura {
   MATRICULA, INVENTARIO, LOTE, COLETA
 }
+

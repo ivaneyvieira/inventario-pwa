@@ -16,6 +16,7 @@ dependencies {
   //implementation("org.springframework.boot:spring-boot-starter-security")
   implementation("org.springframework.session:spring-session-jdbc")
   implementation("com.h2database:h2:1.4.197")
+  //implementation("com.google.code.gson:gson:2.8.5")
 }
 val compileKotlin: KotlinCompile by tasks
 compileKotlin.kotlinOptions {
