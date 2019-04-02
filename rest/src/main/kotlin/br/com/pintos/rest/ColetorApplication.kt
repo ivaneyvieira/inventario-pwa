@@ -4,11 +4,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-open class DemoApplication
+open class ColetorApplication
 
 fun main(args: Array<String>) {
 	val home = System.getenv("HOME")
 	val fileName = System.getenv("EBEAN_PROPS") ?: "$home/ebean.col.properties"
 	System.setProperty("ebean.props.file", fileName)
-	runApplication<DemoApplication>(*args)
+	runApplication<ColetorApplication>(*args)
 }
