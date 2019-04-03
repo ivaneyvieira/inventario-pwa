@@ -13,11 +13,12 @@ import javax.servlet.http.HttpSession
 @RequestMapping("coletor")
 class ColetorColtroler: IView {
   val sessionRepository = HashMap<String, ViewModelColetor>()
-  private fun createViewModelColetor(session: HttpSession): ViewModelColetor {
-    val value = sessionRepository[session.id]
+  private fun createViewModelColetor(idSession : String): ViewModelColetor {
+    println("Sessão id: $idSession")
+    val value = sessionRepository[idSession]
     return if(value == null) {
       val model = ViewModelColetor(this)
-      sessionRepository[session.id] = model
+      sessionRepository[idSession] = model
       model
     }
     else value
@@ -45,33 +46,32 @@ class ColetorColtroler: IView {
     this.messages.msgInfo = msg
   }
 
-  @GetMapping("/leitura/{value}")
+  @GetMapping("/leitura/{value}/{id}")
   @ResponseBody
-  fun processaLeitura(@PathVariable value: String, session: HttpSession): Result {
-    val viewModel = createViewModelColetor(session)
+  fun processaLeitura(@PathVariable value: String, @PathVariable id: String?, session: HttpSession): Result {
+    val idSession = if(id.isNullOrBlank() || id == "NULO") session.id else id
+    val viewModel = createViewModelColetor(idSession)
     try {
       messages.emptyMessages()
       viewModel.updateModel()
       viewModel.processaLeitura(value)
     } finally {
-      val id = session.id
-      val result = Result(id, viewModel, messages)
-      return result
+      return Result(idSession, viewModel.toVo(), messages)
     }
   }
 
-  @GetMapping("/viewmodel")
+  @GetMapping("/viewmodel/{id}")
   @ResponseBody
-  fun viewModel(session: HttpSession): Result {
-    val viewModel = createViewModelColetor(session)
+  fun viewModel(@PathVariable id: String?, session: HttpSession): Result {
+    val idSession = if(id.isNullOrBlank() || id == "NULO") session.id else id
+    val viewModel = createViewModelColetor(idSession)
     messages.emptyMessages()
     viewModel.updateModel()
-    val id = session.id
-    return Result(id, viewModel, messages)
+    return Result(idSession, viewModel.toVo(), messages)
   }
 }
 
-data class Result(val id: String?, val viewModel: ViewModelColetor, val messages: Messages)
+data class Result(val id: String?, val viewModel: ColetorVO, val messages: Messages)
 
 data class Messages(var msgWarning: String = "", var msgError: String = "", var msgInfo: String = "") {
   fun emptyMessages() {
@@ -79,6 +79,30 @@ data class Messages(var msgWarning: String = "", var msgError: String = "", var 
     msgWarning = ""
     msgInfo = ""
   }
+}
+
+data class ColetorVO(val lblInventario: String?, val lblUsuario: String?, val lblLote: String?, val itens: List<String>,
+                     val lblLeitura: String)
+
+fun ViewModelColetor.toVo(): ColetorVO {
+  val lblInventario = inventario?.run {
+    "$numero/${loja.sigla}"
+  }
+  val lblUsuario = usuario?.run {
+    apelido
+  }
+  val lblLote = coleta?.run {
+    "${lote.numero}/$numleitura"
+  }
+  val lista = leituras
+  val last = if(lista.size < 5) lista.size else 5
+  val itens = lista.sortedBy {-it.id}
+    .subList(0, last)
+    .map {
+      "${it.leitura} - ${it.observacao}"
+    }
+  val lblLeitura = this.labelField
+  return ColetorVO(lblInventario, lblUsuario, lblLote, itens, lblLeitura)
 }
 
 inline fun <reified T> HttpSession.get(name : String) : T? = getAttribute(name)  as? T
