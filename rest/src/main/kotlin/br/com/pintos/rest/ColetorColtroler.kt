@@ -92,7 +92,7 @@ fun ViewModelColetor.toVo(): ColetorVO {
     apelido
   }
   val lblLote = coleta?.run {
-    "${lote.numero}/$numleitura"
+    "${lote.numero.padStart(3, '0')}/$numleitura"
   }
   val lista = leituras
   val last = if(lista.size < 5) lista.size else 5
