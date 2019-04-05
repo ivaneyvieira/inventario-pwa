@@ -7,8 +7,8 @@ plugins {
 apply(plugin = "io.spring.dependency-management")
 
 dependencies {
-  compile(project(":framework"))
-  compile(project(":viewmodel"))
+  implementation(project(":framework"))
+  implementation(project(":viewmodel"))
 
   implementation("org.springframework.boot:spring-boot-starter-web")
   implementation("org.springframework.boot:spring-boot-starter-tomcat")
