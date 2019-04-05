@@ -1,23 +1,8 @@
-import io.ebean.gradle.EnhancePluginExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 val vaadin10_version = properties["vaadin10_version"] as String
 val vok_version = properties["vok_version"] as String
 
-buildscript {
-  repositories {
-    mavenCentral()
-  }
-  dependencies {
-    classpath("io.ebean:ebean-gradle-plugin:11.26.1")
-  }
-}
-
-apply(plugin = "io.ebean")
-
-configure<EnhancePluginExtension> {
-  debugLevel = 9
-}
 
 dependencies {
   compile("io.ebean:ebean:11.28.1")

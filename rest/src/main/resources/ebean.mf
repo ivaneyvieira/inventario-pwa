@@ -1,5 +1,0 @@
-profile-location: true
-entity-packages: br.com.pintos.inventario.model
-transactional-packages: br.com.pintos.inventario
-querybean-packages: br.com.pintos.inventario
-
