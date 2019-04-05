@@ -1,7 +1,6 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-  war
   id("org.springframework.boot") version "2.1.3.RELEASE"
 }
 
@@ -18,6 +17,8 @@ dependencies {
   implementation("com.h2database:h2:1.4.197")
   //implementation("com.google.code.gson:gson:2.8.5")
 }
+
+
 val compileKotlin: KotlinCompile by tasks
 compileKotlin.kotlinOptions {
   jvmTarget = "1.8"

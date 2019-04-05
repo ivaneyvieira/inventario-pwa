@@ -69,6 +69,26 @@ class ColetorColtroler: IView {
     viewModel.updateModel()
     return Result(idSession, viewModel.toVo(), messages)
   }
+
+  @GetMapping("/fecha_lote/{id}")
+  @ResponseBody
+  fun fecharLote(@PathVariable id: String?, session: HttpSession): Result {
+    val idSession = if(id.isNullOrBlank() || id == "NULO") session.id else id
+    val viewModel = createViewModelColetor(idSession)
+    messages.emptyMessages()
+    viewModel.fecharLote()
+    return Result(idSession, viewModel.toVo(), messages)
+  }
+
+  @GetMapping("/fecha_usuario/{id}")
+  @ResponseBody
+  fun fecharUsuario(@PathVariable id: String?, session: HttpSession): Result {
+    val idSession = if(id.isNullOrBlank() || id == "NULO") session.id else id
+    val viewModel = createViewModelColetor(idSession)
+    messages.emptyMessages()
+    viewModel.fecharUsuario()
+    return Result(idSession, viewModel.toVo(), messages)
+  }
 }
 
 data class Result(val id: String?, val viewModel: ColetorVO, val messages: Messages)

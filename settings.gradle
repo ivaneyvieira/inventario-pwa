@@ -1,6 +1,6 @@
-include ':framework'
-include ':view'
-include ':viewmodel'
-include ':model'
-include ':rest'
+include 'framework'
+include 'view'
+include 'viewmodel'
+include 'model'
+include 'rest'
 

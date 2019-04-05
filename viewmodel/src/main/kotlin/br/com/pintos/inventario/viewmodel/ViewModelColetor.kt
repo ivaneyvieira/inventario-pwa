@@ -45,6 +45,8 @@ class ViewModelColetor(view : IView) : ViewModel(view){
     val inventariosAbertos = Inventario.inventariosAberto()
     if(inventariosAbertos.size == 1) inventario = inventariosAbertos[0]
     else inventario = null
+
+    coleta = Coleta.findColetaAberta(inventario, usuario)
   }
 
   fun processaLeitura(value: String) = exec {
@@ -78,11 +80,25 @@ class ViewModelColetor(view : IView) : ViewModel(view){
     if(inventariosAberto.isEmpty()) throw EViewModel("Não existe nenhum inventário aberto")
     inventario = inventariosAberto.firstOrNull {it.numero == numero} ?: throw EViewModel(
       "Nenum ivnetnario aberto encontrado com este número")
+    coleta = Coleta.findColetaAberta(inventario, usuario)
   }
 
   private fun processaMatricula(value: String) {
     val matricula = value.toIntOrNull() ?: throw EViewModel("Matrícula inválida")
     usuario = Usuario.find(matricula) ?: throw EViewModel("Matrícula não encontrada")
+    coleta = Coleta.findColetaAberta(inventario, usuario)
+  }
+
+  fun fecharLote() = exec {
+    coleta?.fechaColeta()
+    coleta = null
+    updateModel()
+  }
+
+  fun fecharUsuario() = exec {
+    fecharLote()
+    usuario = null
+    updateModel()
   }
 }
 
