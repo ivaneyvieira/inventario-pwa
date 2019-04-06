@@ -5,6 +5,7 @@ import br.com.astrosoft.framework.model.SimpleBaseModel
 import br.com.pintos.inventario.model.EStatusColeta.ABERTO
 import br.com.pintos.inventario.model.EStatusColeta.FECHADO
 import br.com.pintos.inventario.model.finder.ColetaFinder
+import io.ebean.annotation.Cache
 import javax.persistence.Entity
 import javax.persistence.EnumType
 import javax.persistence.Enumerated
@@ -13,6 +14,7 @@ import javax.persistence.ManyToOne
 import javax.persistence.Table
 
 @Entity
+@Cache(enableQueryCache=false)
 @Table(name = "coleta")
 class Coleta(
   var numleitura: Int,

@@ -12,7 +12,7 @@ open class FornecedorFinder : Finder<Long, Fornecedor>(Fornecedor::class.java) {
    * Start a new typed query.
    */
   fun where(): QFornecedor {
-     return QFornecedor(db())
+     return QFornecedor(db()).setUseQueryCache(false)
   }
 
   /**

@@ -12,7 +12,7 @@ open class ProdutoFinder : Finder<Long, Produto>(Produto::class.java) {
    * Start a new typed query.
    */
   fun where(): QProduto {
-     return QProduto(db())
+     return QProduto(db()).setUseQueryCache(false)
   }
 
   /**

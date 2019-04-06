@@ -12,7 +12,7 @@ open class InventarioFinder : Finder<Long, Inventario>(Inventario::class.java) {
    * Start a new typed query.
    */
   fun where(): QInventario {
-     return QInventario(db())
+     return QInventario(db()).setUseQueryCache(false)
   }
 
   /**

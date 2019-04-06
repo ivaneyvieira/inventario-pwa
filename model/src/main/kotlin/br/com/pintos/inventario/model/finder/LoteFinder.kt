@@ -12,7 +12,7 @@ open class LoteFinder : Finder<Long, Lote>(Lote::class.java) {
    * Start a new typed query.
    */
   fun where(): QLote {
-     return QLote(db())
+     return QLote(db()).setUseQueryCache(false)
   }
 
   /**

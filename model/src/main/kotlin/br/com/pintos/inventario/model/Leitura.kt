@@ -4,6 +4,7 @@ import br.com.astrosoft.framework.model.SimpleBaseModel
 import br.com.pintos.inventario.model.EStatusLeitura.ERRO
 import br.com.pintos.inventario.model.EStatusLeitura.SUCESSO
 import br.com.pintos.inventario.model.finder.LeituraFinder
+import io.ebean.annotation.Cache
 import java.time.LocalTime
 import javax.persistence.Entity
 import javax.persistence.EnumType
@@ -12,6 +13,7 @@ import javax.persistence.ManyToOne
 import javax.persistence.Table
 
 @Entity
+@Cache(enableQueryCache=false)
 @Table(name = "leitura")
 class Leitura(var hora: LocalTime = LocalTime.now(), var leitura: String, var observacao: String, var quant: Int = 1,
               @Enumerated(EnumType.STRING) var status: EStatusLeitura, @ManyToOne var coleta: Coleta, @ManyToOne

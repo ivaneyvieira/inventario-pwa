@@ -12,7 +12,7 @@ open class ColetaFinder : Finder<Long, Coleta>(Coleta::class.java) {
    * Start a new typed query.
    */
   fun where(): QColeta {
-     return QColeta(db())
+     return QColeta(db()).setUseQueryCache(false)
   }
 
   /**

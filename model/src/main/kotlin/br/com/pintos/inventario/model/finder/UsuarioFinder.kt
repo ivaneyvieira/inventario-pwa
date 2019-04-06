@@ -12,7 +12,7 @@ open class UsuarioFinder : Finder<Long, Usuario>(Usuario::class.java) {
    * Start a new typed query.
    */
   fun where(): QUsuario {
-     return QUsuario(db())
+     return QUsuario(db()).setUseQueryCache(false)
   }
 
   /**

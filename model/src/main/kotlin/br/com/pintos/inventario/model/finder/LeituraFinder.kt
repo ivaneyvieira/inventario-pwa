@@ -12,7 +12,7 @@ open class LeituraFinder : Finder<Long, Leitura>(Leitura::class.java) {
    * Start a new typed query.
    */
   fun where(): QLeitura {
-     return QLeitura(db())
+     return QLeitura(db()).setUseQueryCache(false)
   }
 
   /**

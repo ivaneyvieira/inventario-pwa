@@ -2,11 +2,13 @@ package br.com.pintos.inventario.model
 
 import br.com.astrosoft.framework.model.SimpleBaseModel
 import br.com.pintos.inventario.model.finder.ProdutoFinder
+import io.ebean.annotation.Cache
 import javax.persistence.Entity
 import javax.persistence.ManyToOne
 import javax.persistence.Table
 
 @Entity
+@Cache(enableQueryCache=false)
 @Table(name = "produto")
 class Produto(
         var barcode: String,

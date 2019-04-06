@@ -3,6 +3,7 @@ package br.com.pintos.inventario.model
 import br.com.astrosoft.framework.model.SimpleBaseModel
 import br.com.pintos.inventario.model.EStatusInventario.ABERTO
 import br.com.pintos.inventario.model.finder.InventarioFinder
+import io.ebean.annotation.Cache
 import io.ebean.annotation.DbEnumValue
 import java.time.LocalDate
 import javax.persistence.Column
@@ -13,6 +14,7 @@ import javax.persistence.ManyToOne
 import javax.persistence.Table
 
 @Entity
+@Cache(enableQueryCache=false)
 @Table(name = "inventario")
 class Inventario(
         var numero: Int,
