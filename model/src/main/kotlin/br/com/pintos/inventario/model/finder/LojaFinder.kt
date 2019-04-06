@@ -12,7 +12,7 @@ open class LojaFinder : Finder<Long, Loja>(Loja::class.java) {
    * Start a new typed query.
    */
   fun where(): QLoja {
-     return QLoja(db()).setUseQueryCache(false)
+     return QLoja(db())
   }
 
   /**

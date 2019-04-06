@@ -12,7 +12,7 @@ open class CLFinder : Finder<Long, CL>(CL::class.java) {
    * Start a new typed query.
    */
   fun where(): QCL {
-     return QCL(db()).setUseQueryCache(false)
+     return QCL(db())
   }
 
   /**
